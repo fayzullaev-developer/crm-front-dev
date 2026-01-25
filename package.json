@@ -12,6 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/poppins": "^5.2.7",
     "axios": "^1.13.2",
     "bootstrap": "^5.3.3",
     "pinia": "^3.0.4",
