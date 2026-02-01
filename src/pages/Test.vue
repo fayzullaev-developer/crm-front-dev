@@ -1,29 +1,26 @@
 <script setup>
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
-    const icon = document.getElementById('toggleIcon');
 
     sidebar.classList.toggle('collapsed');
-    icon.classList.toggle('bi-chevron-left');
-    icon.classList.toggle('bi-chevron-right');
 }
 </script>
 
 <template>
     <div class="sidebar" id="sidebar">
         <!-- Header -->
-        <div class="p-3 d-flex align-items-center gap-2">
+        <div class="p-3 align-items-center gap-2 company-name-short">
             <span class="logo">Inc</span>
         </div>
 
         <!-- Company -->
         <div class="px-3 company-name text-primary fw-semibold">
-            Kadirov Inc
+            <span class="text-nowrap">Kadirov Inc</span>
         </div>
 
         <!-- Profile -->
         <div class="profile d-flex align-items-center gap-3 p-3">
-            <img src="https://i.pravatar.cc/150?img=47" alt="">
+            <img src="@/assets/ameliya.png" alt="">
             <div class="profile-info">
                 <div class="fw-semibold">Ameliya</div>
                 <small class="text-muted">ameliya.cer@gmail.com</small>
@@ -33,22 +30,22 @@ function toggleSidebar() {
         <!-- Menu -->
         <div class="px-2">
             <a href="#" class="menu-item">
-                <i class="bi bi-person-plus"></i>
+                <img src="@/assets/contacts.svg" alt="">
                 <span class="menu-text">Foydalanuvchi qo‘shish</span>
             </a>
 
             <a href="#" class="menu-item">
-                <i class="bi bi-house"></i>
+                <img src="@/assets/company.svg" alt="">
                 <span class="menu-text">Kompaniyalar</span>
             </a>
 
             <a href="#" class="menu-item">
-                <i class="bi bi-people"></i>
+                <img src="@/assets/clients.svg" alt="">
                 <span class="menu-text">Mijozlar</span>
             </a>
 
             <a href="#" class="menu-item">
-                <i class="bi bi-three-dots"></i>
+                <img src="@/assets/settings.svg" alt="">
                 <span class="menu-text">Sozlamalar</span>
             </a>
         </div>
@@ -56,7 +53,7 @@ function toggleSidebar() {
         <!-- Collapse Button -->
         <div class="bottom-toggle">
             <button class="btn btn-light w-100" @click="toggleSidebar()">
-                <i class="bi bi-chevron-left" id="toggleIcon"></i>
+                <img src="@/assets/toggle.svg" id="toggleIcon" alt="" class="me-2">
                 <span class="menu-text">Menyuni yopish</span>
             </button>
         </div>
@@ -79,6 +76,10 @@ body {
     flex-direction: column;
 }
 
+.sidebar .company-name-short {
+    display: none;
+}
+
 .sidebar.collapsed {
     width: 80px;
 }
@@ -99,6 +100,10 @@ body {
 .sidebar.collapsed .menu-text,
 .sidebar.collapsed .company-name {
     display: none;
+}
+
+.sidebar.collapsed .company-name-short {
+    display: flex;
 }
 
 .menu-item {

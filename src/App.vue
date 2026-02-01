@@ -6,7 +6,9 @@ import Test from "@/pages/Test.vue";
 <template>
     <div class="container-fluid">
         <div class="row">
-            <router-view />
+            <div class="d-flex p-0 m-0">
+                <router-view />
+            </div>
         </div>
     </div>
 </template>
