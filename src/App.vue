@@ -4,11 +4,9 @@ import Test from "@/pages/Test.vue";
 </script>
 
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="d-flex p-0 m-0">
-                <router-view />
-            </div>
+    <div class="container-fluid p-0">
+        <div class="row g-0 d-flex">
+            <router-view />
         </div>
     </div>
 </template>
