@@ -113,10 +113,14 @@ function toggleSidebar() {
 </template>
 
 <style scoped>
-.sidebar, .offcanvas-start {
+.sidebar {
     width: 256px;
     background: #fff;
     min-height: 100vh;
+}
+
+.offcanvas-start {
+    width: 256px;
 }
 
 .offcanvas-start.collapsed {
