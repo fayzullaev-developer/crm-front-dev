@@ -1,133 +1,195 @@
 <script setup>
 function toggleSidebar() {
+    const offcanvas = document.getElementById('offcanvasNavigation');
     const sidebar = document.getElementById('sidebar');
-
+    offcanvas.classList.toggle('collapsed');
     sidebar.classList.toggle('collapsed');
 }
 </script>
 
 <template>
-    <div class="sidebar" id="sidebar">
-        <!-- Header -->
-        <div class="p-3 align-items-center gap-2 company-name-short">
-            <span class="logo">Inc</span>
+
+    <div class="col-auto">
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasNavigationLabel">
+
+            <!-- <div class="offcanvas-header">-->
+            <!--    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavigation" aria-label="Close"></button>-->
+            <!-- </div>-->
+
+            <!-- Sidebar -->
+                <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
+                    <!-- Logo -->
+                    <div class="p-3 align-items-center">
+                        <span class="logo ms-2 company-name text-nowrap">Kadirov Inc</span>
+                        <span class="logo ms-2 company-name-short d-none">Inc</span>
+                    </div>
+
+                    <hr class="mt-0 border-secondary" />
+
+                    <!-- Profile -->
+                    <div class="d-flex profile pt-2 px-4">
+                        <div>
+                            <img class="rounded-circle me-3" src="../assets/images/ameliya.png" alt="" width="46" height="46">
+                        </div>
+                        <div class="d-flex flex-wrap profile-info">
+                            <div class="w-100">
+                                <span class="name">Ameliya</span>
+                            </div>
+                            <div class="w-100 d-flex align-top">
+                                <span class="email">ameliya.cer@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu -->
+                    <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
+                        <li class="nav-item">
+                            <a class="nav-link menu px-0 active" href="#">
+                                <img src="../assets/images/contacts-active.svg" alt="" class="me-2">
+                                <span class="menu-text">Foydalanuvchi qo'shish</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu px-0" href="#">
+                                <img src="../assets/images/company.svg" alt="" class="me-2">
+                                <span class="menu-text">Kompaniyalar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu px-0" href="#">
+                                <img src="../assets/images/clients.svg" alt="" class="me-2">
+                                <span class="menu-text">Mijozlar</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="mt-0 border-secondary" />
+
+                    <!-- Settings -->
+                    <div class="nav px-4">
+                        <a class="nav-link menu px-0" href="#">
+                            <img src="../assets/images/settings.svg" alt="" class="me-2">
+                            <span class="menu-text">Sozlamalar</span>
+                        </a>
+                    </div>
+
+                    <!-- Close menu -->
+                    <div class="nav px-4 mt-auto mb-3">
+                        <button class="nav-link email px-0" @click="toggleSidebar()">
+                            <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
+                            <span class="menu-text">Menyuni yopish</span>
+                        </button>
+                    </div>
+                </aside>
         </div>
+    </div>
 
-        <!-- Company -->
-        <div class="px-3 company-name text-primary fw-semibold">
-            <span class="text-nowrap">Kadirov Inc</span>
+    <div class="col mx-4">
+
+        <div class="d-flex bg-white justify-content-end">
+            <nav class="navbar navbar-expand-lg justify-content-between ms-2">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavigation"
+                        aria-controls="offcanvasNavigation"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <button class="btn btn-primary ms-auto m-2 btn-add">Foydalanuvchi qo'shish</button>
         </div>
-
-        <!-- Profile -->
-        <div class="profile d-flex align-items-center gap-3 p-3">
-            <img src="@/assets/ameliya.png" alt="">
-            <div class="profile-info">
-                <div class="fw-semibold">Ameliya</div>
-                <small class="text-muted">ameliya.cer@gmail.com</small>
-            </div>
-        </div>
-
-        <!-- Menu -->
-        <div class="px-2">
-            <a href="#" class="menu-item">
-                <img src="@/assets/contacts.svg" alt="">
-                <span class="menu-text">Foydalanuvchi qo‘shish</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="@/assets/company.svg" alt="">
-                <span class="menu-text">Kompaniyalar</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="@/assets/clients.svg" alt="">
-                <span class="menu-text">Mijozlar</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="@/assets/settings.svg" alt="">
-                <span class="menu-text">Sozlamalar</span>
-            </a>
-        </div>
-
-        <!-- Collapse Button -->
-        <div class="bottom-toggle">
-            <button class="btn btn-light w-100" @click="toggleSidebar()">
-                <img src="@/assets/toggle.svg" id="toggleIcon" alt="" class="me-2">
-                <span class="menu-text">Menyuni yopish</span>
-            </button>
+        <div class="my-3 company-select">
+            <label for="company">Kompaniya:&nbsp;</label>
+            <select name="company" id="company">
+                <option selected>Hammasi</option>
+                <option value="">Company1</option>
+                <option value="">Company2</option>
+            </select>
         </div>
     </div>
 
 </template>
 
 <style scoped>
-body {
-    margin: 0;
-}
-
-.sidebar {
-    width: 260px;
-    height: 100vh;
+.sidebar, .offcanvas-start {
+    width: 256px;
     background: #fff;
-    border-right: 1px solid #e5e7eb;
-    transition: width 0.3s;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
 }
 
-.sidebar .company-name-short {
-    display: none;
+.offcanvas-start.collapsed {
+    width: 68px;
 }
 
 .sidebar.collapsed {
-    width: 80px;
+    width: 68px;
 }
 
 .logo {
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    color: #0d6efd;
-    font-size: 20px;
+    font-size: 18px;
+    color: #109cf1;
 }
 
-.profile img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
-.sidebar.collapsed .profile-info,
-.sidebar.collapsed .menu-text,
-.sidebar.collapsed .company-name {
-    display: none;
+.email {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #707683;
 }
 
 .sidebar.collapsed .company-name-short {
-    display: flex;
+    display: flex !important;
 }
 
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
-    color: #111;
-    text-decoration: none;
-    border-radius: 8px;
+.sidebar.collapsed .company-name,
+.sidebar.collapsed .profile-info,
+.sidebar.collapsed .menu-text {
+    display: none !important;
 }
 
-.menu-item:hover {
-    background: #f1f5f9;
+.sidebar.collapsed .profile {
+    padding: 8px 11px 0 !important;
 }
 
-.menu-item i {
-    font-size: 20px;
-    color: #0d6efd;
+.menu {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #334d6e;
 }
 
-.bottom-toggle {
-    margin-top: auto;
-    padding: 16px;
+.btn-add {
+    height: 42px;
+    margin-top: 9px !important;
+    margin-right: 12px !important;
+    margin-bottom: 9px !important;
+    background-color: #109cf1;
+    border-color: #109cf1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.company-select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #707683;
+}
+
+.company-select select {
+    border: none;
+    color: #109cf1;
+    appearance: none;
+    background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
 }
 
 </style>

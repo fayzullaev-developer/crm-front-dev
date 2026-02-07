@@ -1,6 +1,5 @@
 <script setup>
-import HomePage from "@/pages/HomePage.vue";
-import Test from "@/pages/Test.vue";
+
 </script>
 
 <template>

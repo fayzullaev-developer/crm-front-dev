@@ -20,7 +20,7 @@ function toggleSidebar() {
             <!-- Profile -->
             <div class="d-flex profile pt-2 px-4">
                 <div>
-                    <img class="rounded-circle me-3" src="@/assets/ameliya.png" alt="" width="46" height="46">
+                    <img class="rounded-circle me-3" src="../assets/images/ameliya.png" alt="" width="46" height="46">
                 </div>
                 <div class="d-flex flex-wrap profile-info">
                     <div class="w-100">
@@ -36,19 +36,19 @@ function toggleSidebar() {
             <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
                 <li class="nav-item">
                     <a class="nav-link menu px-0 active" href="#">
-                        <img src="@/assets/contacts-active.svg" alt="" class="me-2">
+                        <img src="../assets/images/contacts-active.svg" alt="" class="me-2">
                         <span class="menu-text">Foydalanuvchi qo'shish</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu px-0" href="#">
-                        <img src="@/assets/company.svg" alt="" class="me-2">
+                        <img src="../assets/images/company.svg" alt="" class="me-2">
                         <span class="menu-text">Kompaniyalar</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link menu px-0" href="#">
-                        <img src="@/assets/clients.svg" alt="" class="me-2">
+                        <img src="../assets/images/clients.svg" alt="" class="me-2">
                         <span class="menu-text">Mijozlar</span>
                     </a>
                 </li>
@@ -59,7 +59,7 @@ function toggleSidebar() {
             <!-- Settings -->
             <div class="nav px-4">
                 <a class="nav-link menu px-0" href="#">
-                    <img src="@/assets/settings.svg" alt="" class="me-2">
+                    <img src="../assets/images/settings.svg" alt="" class="me-2">
                     <span class="menu-text">Sozlamalar</span>
                 </a>
             </div>
@@ -67,7 +67,7 @@ function toggleSidebar() {
             <!-- Close menu -->
             <div class="nav px-4 mt-auto mb-3">
                 <button class="nav-link email px-0" @click="toggleSidebar()">
-                    <img src="@/assets/toggle.svg" alt="" class="mx-1 me-2">
+                    <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
                     <span class="menu-text">Menyuni yopish</span>
                 </button>
             </div>
@@ -162,7 +162,7 @@ function toggleSidebar() {
     border: none;
     color: #109cf1;
     appearance: none;
-    background: url("@/assets/polygon.svg") 100% / 10% no-repeat;
+    background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
 }
 
 </style>
