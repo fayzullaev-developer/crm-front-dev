@@ -4,7 +4,7 @@
 
 <template>
     <div class="container-fluid p-0">
-        <div class="row g-0 d-flex">
+        <div class="row g-0">
             <router-view />
         </div>
     </div>

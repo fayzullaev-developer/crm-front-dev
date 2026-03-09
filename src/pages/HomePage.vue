@@ -1,83 +1,103 @@
 <script setup>
 function toggleSidebar() {
+    const offcanvas = document.getElementById('offcanvasNavigation');
     const sidebar = document.getElementById('sidebar');
+    offcanvas.classList.toggle('collapsed');
     sidebar.classList.toggle('collapsed');
 }
 </script>
 
 <template>
     <div class="col-auto">
-        <!-- Sidebar -->
-        <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
-            <!-- Logo -->
-            <div class="p-3 align-items-center">
-                <span class="logo ms-2 company-name text-nowrap">Kadirov Inc</span>
-                <span class="logo ms-2 company-name-short d-none">Inc</span>
-            </div>
+        <!-- Offcanvas -->
+        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasNavigationLabel">
 
-            <hr class="mt-0 border-secondary" />
-
-            <!-- Profile -->
-            <div class="d-flex profile pt-2 px-4">
-                <div>
-                    <img class="rounded-circle me-3" src="../assets/images/ameliya.png" alt="" width="46" height="46">
+            <!-- Sidebar -->
+            <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
+                <!-- Logo -->
+                <div class="p-3 align-items-center">
+                    <span class="logo ms-2 company-name text-nowrap">Kadirov Inc</span>
+                    <span class="logo ms-2 company-name-short d-none">Inc</span>
                 </div>
-                <div class="d-flex flex-wrap profile-info">
-                    <div class="w-100">
-                        <span class="name">Ameliya</span>
+
+                <hr class="mt-0 border-secondary" />
+
+                <!-- Profile -->
+                <div class="d-flex profile pt-2 px-4">
+                    <div>
+                        <img class="rounded-circle me-3" src="../assets/images/ameliya.png" alt="" width="46" height="46">
                     </div>
-                    <div class="w-100 d-flex align-top">
-                        <span class="email">ameliya.cer@gmail.com</span>
+                    <div class="d-flex flex-wrap profile-info">
+                        <div class="w-100">
+                            <span class="name">Ameliya</span>
+                        </div>
+                        <div class="w-100 d-flex align-top">
+                            <span class="email">ameliya.cer@gmail.com</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Menu -->
-            <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
-                <li class="nav-item">
-                    <a class="nav-link menu px-0 active" href="#">
-                        <img src="../assets/images/contacts-active.svg" alt="" class="me-2">
-                        <span class="menu-text">Foydalanuvchi qo'shish</span>
-                    </a>
-                </li>
-                <li class="nav-item">
+                <!-- Menu -->
+                <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
+                    <li class="nav-item">
+                        <a class="nav-link menu px-0 active" href="#">
+                            <img src="../assets/images/contacts-active.svg" alt="" class="me-2">
+                            <span class="menu-text">Foydalanuvchi qo'shish</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu px-0" href="#">
+                            <img src="../assets/images/company.svg" alt="" class="me-2">
+                            <span class="menu-text">Kompaniyalar</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu px-0" href="#">
+                            <img src="../assets/images/clients.svg" alt="" class="me-2">
+                            <span class="menu-text">Mijozlar</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <hr class="mt-0 border-secondary" />
+
+                <!-- Settings -->
+                <div class="nav px-4">
                     <a class="nav-link menu px-0" href="#">
-                        <img src="../assets/images/company.svg" alt="" class="me-2">
-                        <span class="menu-text">Kompaniyalar</span>
+                        <img src="../assets/images/settings.svg" alt="" class="me-2">
+                        <span class="menu-text">Sozlamalar</span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link menu px-0" href="#">
-                        <img src="../assets/images/clients.svg" alt="" class="me-2">
-                        <span class="menu-text">Mijozlar</span>
-                    </a>
-                </li>
-            </ul>
+                </div>
 
-            <hr class="mt-0 border-secondary" />
-
-            <!-- Settings -->
-            <div class="nav px-4">
-                <a class="nav-link menu px-0" href="#">
-                    <img src="../assets/images/settings.svg" alt="" class="me-2">
-                    <span class="menu-text">Sozlamalar</span>
-                </a>
-            </div>
-
-            <!-- Close menu -->
-            <div class="nav px-4 mt-auto mb-3">
-                <button class="nav-link email px-0" @click="toggleSidebar()">
-                    <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
-                    <span class="menu-text">Menyuni yopish</span>
-                </button>
-            </div>
-        </aside>
+                <!-- Close menu -->
+                <div class="nav px-4 mt-auto mb-3">
+                    <button class="nav-link email px-0" @click="toggleSidebar()">
+                        <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
+                        <span class="menu-text">Menyuni yopish</span>
+                    </button>
+                </div>
+            </aside>
+        </div>
     </div>
 
     <div class="col mx-4">
+        <!-- Add -->
         <div class="d-flex bg-white justify-content-end">
+            <nav class="navbar navbar-expand-lg justify-content-between ms-2">
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavigation"
+                        aria-controls="offcanvasNavigation"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
             <button class="btn btn-primary ms-auto m-2 btn-add">Foydalanuvchi qo'shish</button>
         </div>
+
+        <!-- Company select -->
         <div class="my-3 company-select">
             <label for="company">Kompaniya:&nbsp;</label>
             <select name="company" id="company">
@@ -86,14 +106,70 @@ function toggleSidebar() {
                 <option value="">Company2</option>
             </select>
         </div>
+
+        <!-- Searching -->
+<!--        <div class="d-flex justify-content-between">-->
+<!--            <div class="d-flex search me-1 mb-1">-->
+<!--                <img src="@/assets/images/search.svg" alt="">-->
+<!--                <input type="text" class="align-middle" placeholder="Foydalanuvchini qidirish" />-->
+<!--            </div>-->
+<!--            <div class="d-flex search me-1 mb-1">-->
+<!--                <img src="@/assets/images/search.svg" alt="">-->
+<!--                <input type="text" class="align-middle" placeholder="Email qidirish" />-->
+<!--            </div>-->
+<!--            <div class="d-flex search me-1 mb-1">-->
+<!--                <img src="@/assets/images/search.svg" alt="">-->
+<!--                <input type="text" class="align-middle" placeholder="Parolni qidirish" />-->
+<!--            </div>-->
+<!--            <div class="d-flex search">-->
+<!--                <img src="@/assets/images/search.svg" alt="">-->
+<!--                <input type="text" class="align-middle" placeholder="So'nggi faollikni qidirish" />-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <!-- Table -->
+        <table class="table mt-3 shadow">
+            <thead>
+            <tr>
+                <th scope="col">Foydalanuvchilar</th>
+                <th scope="col">Email</th>
+                <th scope="col">Parol</th>
+                <th scope="col">So'nggi faollik</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Lindsey Stroud</td>
+                <td>lindsey.stroud@gmail.com</td>
+                <td>12345678</td>
+                <td>5 minut oldin</td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
 <style scoped>
-.sidebar {
+
+input, select {
+    outline: none;
+}
+
+th {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #334d6e;
+}
+
+.sidebar, .offcanvas-start {
     width: 256px;
     background: #fff;
-    min-height: 100vh;
+    min-height: 100svh;
+}
+
+.offcanvas-start.collapsed {
+    width: 68px;
 }
 
 .sidebar.collapsed {
@@ -163,6 +239,26 @@ function toggleSidebar() {
     color: #109cf1;
     appearance: none;
     background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
+}
+
+.search {
+    width: auto;
+    height: 42px;
+    background-color: #fff;
+    box-shadow: 0 1px 6px 0 rgb(0, 0, 0, 25%);
+}
+
+.search img {
+    margin: 11px 12px 11px 18px;
+}
+
+.search input {
+    border: none;
+}
+
+.search input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
 }
 
 </style>
