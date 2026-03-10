@@ -1,135 +1,83 @@
 <script setup>
-function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-
-    sidebar.classList.toggle('collapsed');
-}
 </script>
 
 <template>
 
-
-    <div class="sidebar" id="sidebar">
-        <!-- Header -->
-        <div class="p-3 align-items-center gap-2 company-name-short">
-            <span class="logo">Inc</span>
-        </div>
-
-        <!-- Company -->
-        <div class="px-3 company-name text-primary fw-semibold">
-            <span class="text-nowrap">Kadirov Inc</span>
-        </div>
-
-        <!-- Profile -->
-        <div class="profile d-flex align-items-center gap-3 p-3">
-            <img src="../assets/images/ameliya.png" alt="">
-            <div class="profile-info">
-                <div class="fw-semibold">Ameliya</div>
-                <small class="text-muted">ameliya.cer@gmail.com</small>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col mx-4">
+                <div class="row g-2 justify-content-between">
+                    <div class="col search me-1 mb-1">
+                        <img src="" alt="">
+                        <input type="text" class="w-100 align-middle" placeholder="Test" />
+                    </div>
+                    <div class="col search me-1 mb-1">
+                        <img src="" alt="">
+                        <input type="text" class="align-middle" placeholder="Test" />
+                    </div>
+                    <div class="col search me-1 mb-1">
+                        <img src="" alt="">
+                        <input type="text" class="align-middle" placeholder="Test" />
+                    </div>
+                    <div class="col search me-1 mb-1">
+                        <img src="" alt="">
+                        <input type="text" class="align-middle" placeholder="Test" />
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Menu -->
-        <div class="px-2">
-            <a href="#" class="menu-item">
-                <img src="../assets/images/contacts.svg" alt="">
-                <span class="menu-text">Foydalanuvchi qo‘shish</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="../assets/images/company.svg" alt="">
-                <span class="menu-text">Kompaniyalar</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="../assets/images/clients.svg" alt="">
-                <span class="menu-text">Mijozlar</span>
-            </a>
-
-            <a href="#" class="menu-item">
-                <img src="../assets/images/settings.svg" alt="">
-                <span class="menu-text">Sozlamalar</span>
-            </a>
-        </div>
-
-        <!-- Collapse Button -->
-        <div class="bottom-toggle">
-            <button class="btn btn-light w-100" @click="toggleSidebar()">
-                <img src="../assets/images/toggle.svg" id="toggleIcon" alt="" class="me-2">
-                <span class="menu-text">Menyuni yopish</span>
-            </button>
         </div>
     </div>
 
+
+
+<div class="row g-3"> <!-- g-3: maydonlar orasidagi masofa (gutter) -->
+        
+    <!-- Har bir ustun: Mobil qurilmada 12 (100%), Planshet/PCda 6 (50%) -->
+    <div class="col-12 col-md-6">
+        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
+            <img src="https://flaticon.com" width="18" height="18" alt="search">
+            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 1...">
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
+            <img src="https://flaticon.com" width="18" height="18" alt="search">
+            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 2...">
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
+            <img src="https://flaticon.com" width="18" height="18" alt="search">
+            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 3...">
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
+            <img src="https://flaticon.com" width="18" height="18" alt="search">
+            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 4...">
+        </div>
+    </div>
+
+</div>
+
+    
 </template>
 
 <style scoped>
-body {
-    margin: 0;
-}
-
-.sidebar {
-    width: 260px;
-    height: 100vh;
-    background: #fff;
-    border-right: 1px solid #e5e7eb;
-    transition: width 0.3s;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar .company-name-short {
-    display: none;
-}
-
-.sidebar.collapsed {
-    width: 80px;
-}
-
-.logo {
-    font-weight: 600;
-    color: #0d6efd;
-    font-size: 20px;
-}
-
-.profile img {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-}
-
-.sidebar.collapsed .profile-info,
-.sidebar.collapsed .menu-text,
-.sidebar.collapsed .company-name {
-    display: none;
-}
-
-.sidebar.collapsed .company-name-short {
-    display: flex;
-}
-
-.menu-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 16px;
-    color: #111;
-    text-decoration: none;
-    border-radius: 8px;
-}
-
-.menu-item:hover {
-    background: #f1f5f9;
-}
-
-.menu-item i {
-    font-size: 20px;
-    color: #0d6efd;
-}
-
-.bottom-toggle {
-    margin-top: auto;
-    padding: 16px;
-}
-
+/* Fokus effekti */
+    .search-box {
+        transition: all 0.3s ease;
+    }
+    .search-box:focus-within {
+        border-color: #0d6efd !important;
+        box-shadow: 0 0 10px rgba(13, 110, 253, 0.15);
+        background-color: #f8f9fa !important;
+    }
+    .search-box input:focus {
+        box-shadow: none;
+        outline: none;
+    }
 </style>

@@ -80,7 +80,7 @@ function toggleSidebar() {
         </div>
     </div>
 
-    <div class="col mx-4">
+    <div class="col px-4">
         <!-- Add -->
         <div class="d-flex bg-white justify-content-end">
             <nav class="navbar navbar-expand-lg justify-content-between ms-2">
@@ -108,25 +108,39 @@ function toggleSidebar() {
         </div>
 
         <!-- Searching -->
-<!--        <div class="d-flex justify-content-between">-->
-<!--            <div class="d-flex search me-1 mb-1">-->
-<!--                <img src="@/assets/images/search.svg" alt="">-->
-<!--                <input type="text" class="align-middle" placeholder="Foydalanuvchini qidirish" />-->
-<!--            </div>-->
-<!--            <div class="d-flex search me-1 mb-1">-->
-<!--                <img src="@/assets/images/search.svg" alt="">-->
-<!--                <input type="text" class="align-middle" placeholder="Email qidirish" />-->
-<!--            </div>-->
-<!--            <div class="d-flex search me-1 mb-1">-->
-<!--                <img src="@/assets/images/search.svg" alt="">-->
-<!--                <input type="text" class="align-middle" placeholder="Parolni qidirish" />-->
-<!--            </div>-->
-<!--            <div class="d-flex search">-->
-<!--                <img src="@/assets/images/search.svg" alt="">-->
-<!--                <input type="text" class="align-middle" placeholder="So'nggi faollikni qidirish" />-->
-<!--            </div>-->
-<!--        </div>-->
 
+        <div class="row g-2 justify-content-between">
+
+            <div class="col-12 col-md">
+                <div class="d-flex search">
+                    <img src="@/assets/images/search.svg" alt="">
+                    <input type="text" class="align-middle" placeholder="Foydalanuvchini qidirish" />
+                </div>
+            </div>
+
+            <div class="col-12 col-md">
+                <div class="d-flex search">
+                    <img src="@/assets/images/search.svg" alt="">
+                    <input type="text" class="align-middle" placeholder="Emailni qidirish" />
+                </div>
+            </div>
+
+            <div class="col-12 col-md">
+                <div class="d-flex search">
+                    <img src="@/assets/images/search.svg" alt="">
+                    <input type="text" class="align-middle" placeholder="Parolni qidirish" />
+                </div>
+            </div>
+
+            <div class="col-12 col-md">
+                <div class="d-flex search">
+                    <img src="@/assets/images/search.svg" alt="">
+                    <input type="text" class="align-middle" placeholder="So'nggi faollikni qidirish" />
+                </div>
+            </div>
+            
+        </div>
+        
         <!-- Table -->
         <table class="table mt-3 shadow">
             <thead>
