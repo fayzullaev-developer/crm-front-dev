@@ -3,8 +3,8 @@
 </script>
 
 <template>
-    <div class="container-fluid p-0">
-        <div class="row g-0">
+    <div class="container-fluid g-sm-0">
+        <div class="row g-sm-0">
             <router-view />
         </div>
     </div>

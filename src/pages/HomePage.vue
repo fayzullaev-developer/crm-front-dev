@@ -80,7 +80,7 @@ function toggleSidebar() {
         </div>
     </div>
 
-    <div class="col px-4">
+    <div class="col mx-sm-4 mx-auto">
         <!-- Add -->
         <div class="d-flex bg-white justify-content-end">
             <nav class="navbar navbar-expand-lg justify-content-between ms-2">
@@ -142,7 +142,8 @@ function toggleSidebar() {
         </div>
         
         <!-- Table -->
-        <table class="table mt-3 shadow">
+        <div class="table-responsive">
+            <table class="table mt-3 shadow">
             <thead>
             <tr>
                 <th scope="col">Foydalanuvchilar</th>
@@ -160,6 +161,8 @@ function toggleSidebar() {
             </tr>
             </tbody>
         </table>
+        </div>
+        
     </div>
 </template>
 
