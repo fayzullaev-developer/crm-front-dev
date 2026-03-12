@@ -142,25 +142,25 @@ function toggleSidebar() {
         </div>
         
         <!-- Table -->
-        <div class="table-responsive">
-            <table class="table mt-3 shadow">
-            <thead>
-            <tr>
-                <th scope="col">Foydalanuvchilar</th>
-                <th scope="col">Email</th>
-                <th scope="col">Parol</th>
-                <th scope="col">So'nggi faollik</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Lindsey Stroud</td>
-                <td>lindsey.stroud@gmail.com</td>
-                <td>12345678</td>
-                <td>5 minut oldin</td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive mt-3 shadow">
+            <table class="table mb-0 align-middle">
+                <thead class="p-3">
+                    <tr>
+                        <th scope="col" class="ps-3 py-3 w-25">Foydalanuvchilar</th>
+                        <th scope="col" class="py-3 w-25">Email</th>
+                        <th scope="col" class="py-3 w-25">Parol</th>
+                        <th scope="col" class="pe-3 py-3 w-25">So'nggi faollik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
+                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
+                        <td class="py-3 w-25">12345678</td>
+                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         
     </div>
@@ -172,10 +172,16 @@ input, select {
     outline: none;
 }
 
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
 th {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
+    opacity: 0.5;
     color: #334d6e;
 }
 
