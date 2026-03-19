@@ -8,7 +8,7 @@ function toggleSidebar() {
 </script>
 
 <template>
-    <div class="col-auto">
+    <div class="col-sm-auto">
         <!-- Offcanvas -->
         <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasNavigationLabel">
 
