@@ -159,6 +159,18 @@ function toggleSidebar() {
                         <td class="py-3 w-25">12345678</td>
                         <td class="pe-3 py-3 w-25">5 minut oldin</td>
                     </tr>
+                    <tr>
+                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
+                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
+                        <td class="py-3 w-25">12345678</td>
+                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                    </tr>
+                    <tr>
+                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
+                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
+                        <td class="py-3 w-25">12345678</td>
+                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -183,6 +195,13 @@ th {
     font-size: 13px;
     opacity: 0.5;
     color: #334d6e;
+}
+
+td {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #323c47;
 }
 
 .sidebar, .offcanvas-start {
