@@ -142,34 +142,43 @@ function toggleSidebar() {
         </div>
         
         <!-- Table -->
-        <div class="table-responsive mt-3 shadow">
+        <div class="table-responsive mt-3 shadow rounded-top">
             <table class="table mb-0 align-middle">
                 <thead class="p-3">
                     <tr>
-                        <th scope="col" class="ps-3 py-3 w-25">Foydalanuvchilar</th>
-                        <th scope="col" class="py-3 w-25">Email</th>
-                        <th scope="col" class="py-3 w-25">Parol</th>
-                        <th scope="col" class="pe-3 py-3 w-25">So'nggi faollik</th>
+                        <th scope="col" class="ps-2 ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25 align-middle text-break">Foydalanuvchilar</th>
+                        <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Email</th>
+                        <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Parol</th>
+                        <th scope="col" class="pe-2 pe-sm-3 py-2 py-sm-3 w-25 align-middle text-break">So'nggi faollik</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
-                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
-                        <td class="py-3 w-25">12345678</td>
-                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                            <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
+                            <span class="name-user text-break">Lindsey Stroud</span>
+                        </td>
+                        <td class="py-2 py-sm-3 w-25 text-truncate  text-break">lindsey.stroud@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25">12345678</td>
+                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25 text-break">5 minut oldin</td>
                     </tr>
                     <tr>
-                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
-                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
-                        <td class="py-3 w-25">12345678</td>
-                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                            <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
+                            <span class="name-user">Nicci Troiani</span>
+                        </td>
+                        <td class="py-2 py-sm-3 w-25 text-truncate">nicci.troiani@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25">12345678</td>
+                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25">14 minut oldin</td>
                     </tr>
                     <tr>
-                        <td class="ps-3 py-3 w-25">Lindsey Stroud</td>
-                        <td class="py-3 w-25 text-truncate">lindsey.stroud@gmail.com</td>
-                        <td class="py-3 w-25">12345678</td>
-                        <td class="pe-3 py-3 w-25">5 minut oldin</td>
+                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                            <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
+                            <span class="name-user">George Fields</span>
+                        </td>
+                        <td class="py-2 py-sm-3 w-25 text-truncate">george.fields@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25">12345678</td>
+                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25">6 minut oldin</td>
                     </tr>
                 </tbody>
             </table>
@@ -185,20 +194,25 @@ input, select {
 }
 
 table {
+    font-family: 'Poppins', sans-serif;
     table-layout: fixed;
     width: 100%;
 }
 
 th {
-    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 13px;
     opacity: 0.5;
+    font-size: 13px;
     color: #334d6e;
 }
 
 td {
-    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #707683;
+}
+
+.name-user {
     font-weight: 500;
     font-size: 15px;
     color: #323c47;
