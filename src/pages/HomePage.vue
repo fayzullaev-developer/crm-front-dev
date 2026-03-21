@@ -146,39 +146,39 @@ function toggleSidebar() {
             <table class="table mb-0 align-middle">
                 <thead class="p-3">
                     <tr>
-                        <th scope="col" class="ps-2 ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25 align-middle text-break">Foydalanuvchilar</th>
+                        <th scope="col" class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25 align-middle text-break">Foy<wbr>da<wbr>la<wbr>nuv<wbr>chi<wbr>lar</th>
                         <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Email</th>
                         <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Parol</th>
-                        <th scope="col" class="pe-2 pe-sm-3 py-2 py-sm-3 w-25 align-middle text-break">So'nggi faollik</th>
+                        <th scope="col" class="pe-3 py-2 py-sm-3 w-25 align-middle text-break">So'nggi faollik</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
                             <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
                             <span class="name-user text-break">Lindsey Stroud</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-truncate  text-break">lindsey.stroud@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25 text-break">lindsey.stroud@gmail.com</td>
                         <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25 text-break">5 minut oldin</td>
+                        <td class="pe-3 py-2 py-sm-3 w-25 text-break">5 minut oldin</td>
                     </tr>
                     <tr>
-                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
                             <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
                             <span class="name-user">Nicci Troiani</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-truncate">nicci.troiani@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25 text-break">nicci.troiani@gmail.com</td>
                         <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25">14 minut oldin</td>
+                        <td class="pe-3 py-2 py-sm-3 w-25">14 minut oldin</td>
                     </tr>
                     <tr>
-                        <td class="ps-sm-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
                             <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
                             <span class="name-user">George Fields</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-truncate">george.fields@gmail.com</td>
+                        <td class="py-2 py-sm-3 w-25 text-break">george.fields@gmail.com</td>
                         <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-2 pe-sm-3 py-2 py-sm-3 w-25">6 minut oldin</td>
+                        <td class="pe-3 py-2 py-sm-3 w-25">6 minut oldin</td>
                     </tr>
                 </tbody>
             </table>
@@ -309,6 +309,7 @@ td {
 }
 
 .search input {
+    flex-grow: 1;
     border: none;
 }
 
