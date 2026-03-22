@@ -5,6 +5,14 @@ function toggleSidebar() {
     offcanvas.classList.toggle('collapsed');
     sidebar.classList.toggle('collapsed');
 }
+
+// toast'ni ishga tushirish
+function showToast() {
+    const element = document.getElementById('liveToast');
+    const toast = window.bootstrap.Toast.getOrCreateInstance(element);
+    toast.show();
+}
+
 </script>
 
 <template>
@@ -94,7 +102,49 @@ function toggleSidebar() {
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
-            <button class="btn btn-primary ms-auto m-2 btn-add">Foydalanuvchi qo'shish</button>
+            <button
+                type="button"
+                class="btn btn-primary ms-auto m-2 btn-add"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                    Foydalanuvchi qo'shish
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Foydalanuvchi qo'shish</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label">Ism*</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Email*</label>
+                                <input type="text" class="form-control" id="email" placeholder="example@mail.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">Parol*</label>
+                                <input type="text" class="form-control" id="password" placeholder="Parol" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            @click="showToast"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal">
+                                Qo'shish
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Company select -->
@@ -108,7 +158,6 @@ function toggleSidebar() {
         </div>
 
         <!-- Searching -->
-
         <div class="row g-2 justify-content-between">
 
             <div class="col-12 col-md">
@@ -146,42 +195,75 @@ function toggleSidebar() {
             <table class="table mb-0 align-middle">
                 <thead class="p-3">
                     <tr>
-                        <th scope="col" class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25 align-middle text-break">Foy<wbr>da<wbr>la<wbr>nuv<wbr>chi<wbr>lar</th>
-                        <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Email</th>
-                        <th scope="col" class="py-2 py-sm-3 w-25 align-middle text-break">Parol</th>
-                        <th scope="col" class="pe-3 py-2 py-sm-3 w-25 align-middle text-break">So'nggi faollik</th>
+                        <th scope="col" class="ps-3 ps-md-4 py-2 py-sm-3 align-middle text-break">Foy<wbr>da<wbr>la<wbr>nuv<wbr>chi<wbr>lar</th>
+                        <th scope="col" class="py-2 py-sm-3 align-middle text-break">Email</th>
+                        <th scope="col" class="py-2 py-sm-3 align-middle text-break">Parol</th>
+                        <th scope="col" class="py-2 py-sm-3 align-middle text-break">So'nggi faollik</th>
+                        <th scope="col" class="pe-3 pe-md-4 py-2 py-sm-3 action-col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                             <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
                             <span class="name-user text-break">Lindsey Stroud</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-break">lindsey.stroud@gmail.com</td>
-                        <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-3 py-2 py-sm-3 w-25 text-break">5 minut oldin</td>
+                        <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
+                        <td class="py-2 py-sm-3">12345678</td>
+                        <td class="py-2 py-sm-3 text-break">5 minut oldin</td>
+                        <td class="pe-3 pe-md-4 py-2 py-sm-3">
+                            <div class="d-flex justify-content-evenly">
+                                <button class="img-btn">
+                                    <img src="@/assets/images/edit.svg" alt="edit">
+                                </button>
+                                <button class="img-btn">
+                                    <img src="@/assets/images/delete.svg" alt="delete">
+                                </button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
                             <span class="name-user">Nicci Troiani</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-break">nicci.troiani@gmail.com</td>
-                        <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-3 py-2 py-sm-3 w-25">14 minut oldin</td>
+                        <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
+                        <td class="py-2 py-sm-3">12345678</td>
+                        <td class="py-2 py-sm-3">14 minut oldin</td>
+                        <td class="pe-3 pe-md-4 py-2 py-sm-3">
+                            <div class="d-flex justify-content-evenly">
+                                <img src="@/assets/images/edit.svg" alt="edit">
+                                <img src="@/assets/images/delete.svg" alt="delete">
+                            </div>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="ps-3 ps-md-4 ps-xl-5 py-2 py-sm-3 w-25">
+                        <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
                             <span class="name-user">George Fields</span>
                         </td>
-                        <td class="py-2 py-sm-3 w-25 text-break">george.fields@gmail.com</td>
-                        <td class="py-2 py-sm-3 w-25">12345678</td>
-                        <td class="pe-3 py-2 py-sm-3 w-25">6 minut oldin</td>
+                        <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
+                        <td class="py-2 py-sm-3">12345678</td>
+                        <td class="py-2 py-sm-3">6 minut oldin</td>
+                        <td class="pe-3 pe-md-4 py-2 py-sm-3">
+                            <div class="d-flex justify-content-evenly">
+                                <img src="@/assets/images/edit.svg" alt="edit">
+                                <img src="@/assets/images/delete.svg" alt="delete">
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- Toast -->
+        <div class="toast-container position-fixed start-50 toast-position translate-middle-x">
+            <div id="liveToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">
+                    <img src="..." class="rounded me-2" alt="">
+                    Ma'lumotlar muvaffaqiyatli o'zgartirildi
+                </div>
+            </div>
         </div>
         
     </div>
@@ -189,6 +271,7 @@ function toggleSidebar() {
 
 <style scoped>
 
+/* General style - start */
 input, select {
     outline: none;
 }
@@ -211,6 +294,7 @@ td {
     font-size: 13px;
     color: #707683;
 }
+/* General style - end */
 
 .name-user {
     font-weight: 500;
@@ -317,5 +401,41 @@ td {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
 }
+
+/* Table */
+@media (min-width: 650px) {
+    .action-col {
+        width: 120px;
+        min-width: 120px;
+    }
+}
+
+/*
+.table th:last-child,
+.table td:last-child {
+    width: 120px;
+    min-width: 65px;
+}
+ */
+
+.img-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.1s ease;
+}
+
+.img-btn:active {
+    transform: scale(0.92);
+    filter: brightness(0.8);
+}
+
+/* toast style - start */
+.toast-position {
+    top: 50px !important;
+}
+/* toast style - end */
 
 </style>
