@@ -324,25 +324,6 @@ function showToast() {
 input, select {
     outline: none;
 }
-
-table {
-    font-family: 'Poppins', sans-serif;
-    table-layout: fixed;
-    width: 100%;
-}
-
-th {
-    font-weight: 500;
-    opacity: 0.5;
-    font-size: 13px;
-    color: #334d6e;
-}
-
-td {
-    font-weight: 400;
-    font-size: 13px;
-    color: #707683;
-}
 /* General style - end */
 
 /* Sidebar - start */
@@ -407,6 +388,7 @@ td {
 }
 /* Sidebar - end */
 
+/* Add button - start */
 .btn-add {
     height: 42px;
     margin-top: 9px !important;
@@ -418,7 +400,9 @@ td {
     font-weight: 500;
     font-size: 13px;
 }
+/* Add button - end */
 
+/* Select company - start */
 .company-select {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
@@ -431,6 +415,7 @@ td {
     appearance: none;
     background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
 }
+/* Select company - end */
 
 /* Search - start */
 .search {
@@ -461,6 +446,25 @@ td {
         width: 120px;
         min-width: 120px;
     }
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    table-layout: fixed;
+    width: 100%;
+}
+
+th {
+    font-weight: 500;
+    opacity: 0.5;
+    font-size: 13px;
+    color: #334d6e;
+}
+
+td {
+    font-weight: 400;
+    font-size: 13px;
+    color: #707683;
 }
 
 .img-btn {
