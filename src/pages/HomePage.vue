@@ -106,13 +106,13 @@ function showToast() {
                 type="button"
                 class="btn btn-primary ms-auto m-2 btn-add"
                 data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">
+                data-bs-target="#modalAdd">
                     Foydalanuvchi qo'shish
             </button>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Modal for add -->
+        <div class="modal fade" id="modalAdd" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -135,12 +135,11 @@ function showToast() {
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button
-                            type="button"
-                            @click="showToast"
-                            class="btn btn-primary"
-                            data-bs-dismiss="modal">
-                                Qo'shish
+                        <button type="button"
+                                @click="showToast"
+                                class="btn btn-primary"
+                                data-bs-dismiss="modal">
+                            Qo'shish
                         </button>
                     </div>
                 </div>
@@ -213,10 +212,10 @@ function showToast() {
                         <td class="py-2 py-sm-3 text-break">5 minut oldin</td>
                         <td class="pe-3 pe-md-4 py-2 py-sm-3">
                             <div class="d-flex justify-content-evenly">
-                                <button class="img-btn">
+                                <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
                                     <img src="@/assets/images/edit.svg" alt="edit">
                                 </button>
-                                <button class="img-btn">
+                                <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
                                     <img src="@/assets/images/delete.svg" alt="delete">
                                 </button>
                             </div>
@@ -256,12 +255,62 @@ function showToast() {
             </table>
         </div>
 
+        <!-- Modal for edit -->
+        <div class="modal fade" id="modalChange" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalChangeLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalChangeLabel">O'zgartirish</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label">Ism*</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Email*</label>
+                                <input type="text" class="form-control" id="email" placeholder="example@mail.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">Parol*</label>
+                                <input type="text" class="form-control" id="password" placeholder="Parol" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"
+                                @click="showToast"
+                                class="btn btn-primary"
+                                data-bs-dismiss="modal">
+                            O'zgartirish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for delete -->
+        <div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-top">
+                <div class="modal-content">
+                    <div class="modal-body d-flex justify-content-between align-items-center">
+                        <span class="mb-0">Rostdan ham o'chirilsinmi?</span>
+                        <div class="ms-3">
+                            <button type="button" class="btn btn-danger me-3">Ha</button>
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yo'q</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Toast -->
         <div class="toast-container position-fixed start-50 toast-position translate-middle-x">
             <div id="liveToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-body">
-                    <img src="..." class="rounded me-2" alt="">
-                    Ma'lumotlar muvaffaqiyatli o'zgartirildi
+                    <img src="@/assets/images/check.svg" class="rounded me-2" alt="">
+                    Ma'lumotlar muvaffaqiyatli qo'shildi
                 </div>
             </div>
         </div>
@@ -296,6 +345,7 @@ td {
 }
 /* General style - end */
 
+/* Sidebar - start */
 .name-user {
     font-weight: 500;
     font-size: 15px;
@@ -355,6 +405,7 @@ td {
     font-size: 13px;
     color: #334d6e;
 }
+/* Sidebar - end */
 
 .btn-add {
     height: 42px;
@@ -381,6 +432,7 @@ td {
     background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
 }
 
+/* Search - start */
 .search {
     width: auto;
     height: 42px;
@@ -401,22 +453,15 @@ td {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
 }
+/* Search - end */
 
-/* Table */
+/* Table - start */
 @media (min-width: 650px) {
     .action-col {
         width: 120px;
         min-width: 120px;
     }
 }
-
-/*
-.table th:last-child,
-.table td:last-child {
-    width: 120px;
-    min-width: 65px;
-}
- */
 
 .img-btn {
     background: none;
@@ -431,6 +476,7 @@ td {
     transform: scale(0.92);
     filter: brightness(0.8);
 }
+/* Table - end */
 
 /* toast style - start */
 .toast-position {
