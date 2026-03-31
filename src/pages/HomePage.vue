@@ -324,6 +324,37 @@ function showToast() {
 input, select {
     outline: none;
 }
+
+/* FONTS */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-open-sans { font-family: 'Open Sans', sans-serif; }
+
+/* SIZE */
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-13 { font-size: 13px; }
+.fs-15 { font-size: 15px; }
+.fs-16 { font-size: 16px; }
+.fs-18 { font-size: 18px; }
+.fs-24 { font-size: 24px; }
+
+/* WEIGHT */
+.fw-thin { font-weight: 100; }
+.fw-ex-light { font-weight: 200; }
+.fw-light { font-weight: 300; }
+.fw-normal { font-weight: 400; }
+.fw-medium { font-weight: 500; }
+.fw-se-bold { font-weight: 600; }
+.fw-bold { font-weight: 700; }
+.fw-ex-bold { font-weight: 800; }
+.fw-black { font-weight: 900; }
+
+/* COLOR */
+.text-blue { color: #109cf1; }
+.text-dark { color: #334d6e; }
+.text-muted { color: #323c47; }
+.text-gray { color: #707683; }
+
 /* General style - end */
 
 /* Sidebar - start */
