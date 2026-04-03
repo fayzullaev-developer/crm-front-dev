@@ -24,8 +24,8 @@ function showToast() {
             <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
                 <!-- Logo -->
                 <div class="p-3 align-items-center">
-                    <span class="logo ms-2 company-name text-nowrap">Kadirov Inc</span>
-                    <span class="logo ms-2 company-name-short d-none">Inc</span>
+                    <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">Kadirov Inc</span>
+                    <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name-short d-none">Inc</span>
                 </div>
 
                 <hr class="mt-0 border-secondary" />
@@ -37,10 +37,10 @@ function showToast() {
                     </div>
                     <div class="d-flex flex-wrap profile-info">
                         <div class="w-100">
-                            <span class="name">Ameliya</span>
+                            <span class="font-poppins fs-14">Ameliya</span>
                         </div>
                         <div class="w-100 d-flex align-top">
-                            <span class="email">ameliya.cer@gmail.com</span>
+                            <span class="font-poppins fw-medium fs-11 text-p-gray">ameliya.cer@gmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -48,19 +48,19 @@ function showToast() {
                 <!-- Menu -->
                 <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
                     <li class="nav-item">
-                        <a class="nav-link menu px-0 active" href="#">
-                            <img src="../assets/images/contacts-active.svg" alt="" class="me-2">
+                        <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" href="#">
+                            <img src="@/assets/images/contacts-active.svg" alt="" class="me-2">
                             <span class="menu-text">Foydalanuvchi qo'shish</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu px-0" href="#">
+                        <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
                             <img src="../assets/images/company.svg" alt="" class="me-2">
                             <span class="menu-text">Kompaniyalar</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu px-0" href="#">
+                        <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
                             <img src="../assets/images/clients.svg" alt="" class="me-2">
                             <span class="menu-text">Mijozlar</span>
                         </a>
@@ -71,7 +71,7 @@ function showToast() {
 
                 <!-- Settings -->
                 <div class="nav px-4">
-                    <a class="nav-link menu px-0" href="#">
+                    <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
                         <img src="../assets/images/settings.svg" alt="" class="me-2">
                         <span class="menu-text">Sozlamalar</span>
                     </a>
@@ -79,7 +79,7 @@ function showToast() {
 
                 <!-- Close menu -->
                 <div class="nav px-4 mt-auto mb-3">
-                    <button class="nav-link email px-0" @click="toggleSidebar()">
+                    <button class="nav-link font-poppins fw-medium fs-11 text-p-gray px-0" @click="toggleSidebar()">
                         <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
                         <span class="menu-text">Menyuni yopish</span>
                     </button>
@@ -104,7 +104,7 @@ function showToast() {
             </nav>
             <button
                 type="button"
-                class="btn btn-primary ms-auto m-2 btn-add"
+                class="btn btn-primary ms-auto m-2 btn-add font-poppins fw-medium fs-13"
                 data-bs-toggle="modal"
                 data-bs-target="#modalAdd">
                     Foydalanuvchi qo'shish
@@ -147,7 +147,7 @@ function showToast() {
         </div>
 
         <!-- Company select -->
-        <div class="my-3 company-select">
+        <div class="my-3 font-poppins fs-12 text-p-gray company">
             <label for="company">Kompaniya:&nbsp;</label>
             <select name="company" id="company">
                 <option selected>Hammasi</option>
@@ -191,7 +191,7 @@ function showToast() {
         
         <!-- Table -->
         <div class="table-responsive mt-3 shadow rounded-top">
-            <table class="table mb-0 align-middle">
+            <table class="table mb-0 align-middle font-poppins fs-13">
                 <thead class="p-3">
                     <tr>
                         <th scope="col" class="ps-3 ps-md-4 py-2 py-sm-3 align-middle text-break">Foy<wbr>da<wbr>la<wbr>nuv<wbr>chi<wbr>lar</th>
@@ -205,7 +205,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                             <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
-                            <span class="name-user text-break">Lindsey Stroud</span>
+                            <span class="fw-p-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -224,7 +224,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
-                            <span class="name-user">Nicci Troiani</span>
+                            <span class="fw-p-medium fs-15 text-p-muted">Nicci Troiani</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -239,7 +239,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
-                            <span class="name-user">George Fields</span>
+                            <span class="fw-p-medium fs-15 text-p-muted">George Fields</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -333,37 +333,36 @@ input, select {
 .fs-11 { font-size: 11px; }
 .fs-12 { font-size: 12px; }
 .fs-13 { font-size: 13px; }
+.fs-14 { font-size: 14px; }
 .fs-15 { font-size: 15px; }
 .fs-16 { font-size: 16px; }
 .fs-18 { font-size: 18px; }
 .fs-24 { font-size: 24px; }
 
 /* WEIGHT */
-.fw-thin { font-weight: 100; }
-.fw-ex-light { font-weight: 200; }
-.fw-light { font-weight: 300; }
-.fw-normal { font-weight: 400; }
-.fw-medium { font-weight: 500; }
-.fw-se-bold { font-weight: 600; }
-.fw-bold { font-weight: 700; }
-.fw-ex-bold { font-weight: 800; }
-.fw-black { font-weight: 900; }
+.fw-p-thin { font-weight: 100; }
+.fw-p-ex-light { font-weight: 200; }
+.fw-p-light { font-weight: 300; }
+.fw-p-normal { font-weight: 400; }
+.fw-p-medium { font-weight: 500; }
+.fw-p-se-bold { font-weight: 600; }
+.fw-p-bold { font-weight: 700; }
+.fw-p-ex-bold { font-weight: 800; }
+.fw-p-black { font-weight: 900; }
 
-/* COLOR */
-.text-blue { color: #109cf1; }
-.text-dark { color: #334d6e; }
-.text-muted { color: #323c47; }
-.text-gray { color: #707683; }
+/* TEXT COLOR */
+.text-p-blue { color: #109cf1; }
+.text-p-dark { color: #334d6e; }
+.text-p-muted { color: #323c47; }
+.text-p-gray { color: #707683; }
+
+/* BACKGROUND COLOR */
+.bg-p-green { color: #34d47e; }
+.bg-p-red { color: #f7685b; }
 
 /* General style - end */
 
 /* Sidebar - start */
-.name-user {
-    font-weight: 500;
-    font-size: 15px;
-    color: #323c47;
-}
-
 .sidebar, .offcanvas-start {
     width: 256px;
     background: #fff;
@@ -376,25 +375,6 @@ input, select {
 
 .sidebar.collapsed {
     width: 68px;
-}
-
-.logo {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    color: #109cf1;
-}
-
-.name {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-}
-
-.email {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 11px;
-    color: #707683;
 }
 
 .sidebar.collapsed .company-name-short {
@@ -410,16 +390,9 @@ input, select {
 .sidebar.collapsed .profile {
     padding: 8px 11px 0 !important;
 }
-
-.menu {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 13px;
-    color: #334d6e;
-}
 /* Sidebar - end */
 
-/* Add button - start */
+/* Buttons - start */
 .btn-add {
     height: 42px;
     margin-top: 9px !important;
@@ -427,20 +400,11 @@ input, select {
     margin-bottom: 9px !important;
     background-color: #109cf1;
     border-color: #109cf1;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
 }
-/* Add button - end */
+/* Buttons - end */
 
 /* Select company - start */
-.company-select {
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    color: #707683;
-}
-
-.company-select select {
+.company select {
     border: none;
     color: #109cf1;
     appearance: none;
@@ -480,7 +444,6 @@ input, select {
 }
 
 table {
-    font-family: 'Poppins', sans-serif;
     table-layout: fixed;
     width: 100%;
 }
@@ -488,13 +451,11 @@ table {
 th {
     font-weight: 500;
     opacity: 0.5;
-    font-size: 13px;
     color: #334d6e;
 }
 
 td {
     font-weight: 400;
-    font-size: 13px;
     color: #707683;
 }
 
