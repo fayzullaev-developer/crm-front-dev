@@ -205,7 +205,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                             <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
-                            <span class="fw-p-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
+                            <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -224,7 +224,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
-                            <span class="fw-p-medium fs-15 text-p-muted">Nicci Troiani</span>
+                            <span class="fw-medium fs-15 text-p-muted">Nicci Troiani</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -239,7 +239,7 @@ function showToast() {
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
                             <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
-                            <span class="fw-p-medium fs-15 text-p-muted">George Fields</span>
+                            <span class="fw-medium fs-15 text-p-muted">George Fields</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
                         <td class="py-2 py-sm-3">12345678</td>
@@ -321,6 +321,7 @@ function showToast() {
 <style scoped>
 
 /* General style - start */
+
 input, select {
     outline: none;
 }
@@ -335,20 +336,16 @@ input, select {
 .fs-13 { font-size: 13px; }
 .fs-14 { font-size: 14px; }
 .fs-15 { font-size: 15px; }
-.fs-16 { font-size: 16px; }
 .fs-18 { font-size: 18px; }
-.fs-24 { font-size: 24px; }
 
-/* WEIGHT */
-.fw-p-thin { font-weight: 100; }
-.fw-p-ex-light { font-weight: 200; }
-.fw-p-light { font-weight: 300; }
-.fw-p-normal { font-weight: 400; }
-.fw-p-medium { font-weight: 500; }
-.fw-p-se-bold { font-weight: 600; }
-.fw-p-bold { font-weight: 700; }
-.fw-p-ex-bold { font-weight: 800; }
-.fw-p-black { font-weight: 900; }
+/* .fs-16 { font-size: 16px; }
+    .fs-24 { font-size: 24px; } */
+
+/* WEIGHT
+    .fw-p-thin { font-weight: 100; }
+    .fw-p-ex-light { font-weight: 200; }
+    .fw-p-ex-bold { font-weight: 800; }
+    .fw-p-black { font-weight: 900; } */
 
 /* TEXT COLOR */
 .text-p-blue { color: #109cf1; }
