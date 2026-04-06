@@ -18,13 +18,18 @@ function showToast() {
 <template>
     <div class="col-sm-auto">
         <!-- Offcanvas -->
-        <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasNavigation" aria-labelledby="offcanvasNavigationLabel">
+        <div class="offcanvas-lg offcanvas-start"
+             tabindex="-1"
+             id="offcanvasNavigation"
+             aria-labelledby="offcanvasNavigationLabel">
 
             <!-- Sidebar -->
             <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
                 <!-- Logo -->
                 <div class="p-3 align-items-center">
-                    <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">Kadirov Inc</span>
+                    <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">
+                        Kadirov Inc
+                    </span>
                     <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name-short d-none">Inc</span>
                 </div>
 
@@ -33,7 +38,7 @@ function showToast() {
                 <!-- Profile -->
                 <div class="d-flex profile pt-2 px-4">
                     <div>
-                        <img class="rounded-circle me-3" src="../assets/images/ameliya.png" alt="" width="46" height="46">
+                        <img class="rounded-circle me-3" src="@/assets/images/ameliya.png" alt="" width="46" height="46">
                     </div>
                     <div class="d-flex flex-wrap profile-info">
                         <div class="w-100">
@@ -55,13 +60,13 @@ function showToast() {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                            <img src="../assets/images/company.svg" alt="" class="me-2">
+                            <img src="@/assets/images/company.svg" alt="" class="me-2">
                             <span class="menu-text">Kompaniyalar</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                            <img src="../assets/images/clients.svg" alt="" class="me-2">
+                            <img src="@/assets/images/clients.svg" alt="" class="me-2">
                             <span class="menu-text">Mijozlar</span>
                         </a>
                     </li>
@@ -72,7 +77,7 @@ function showToast() {
                 <!-- Settings -->
                 <div class="nav px-4">
                     <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                        <img src="../assets/images/settings.svg" alt="" class="me-2">
+                        <img src="@/assets/images/settings.svg" alt="" class="me-2">
                         <span class="menu-text">Sozlamalar</span>
                     </a>
                 </div>
@@ -80,7 +85,7 @@ function showToast() {
                 <!-- Close menu -->
                 <div class="nav px-4 mt-auto mb-3">
                     <button class="nav-link font-poppins fw-medium fs-11 text-p-gray px-0" @click="toggleSidebar()">
-                        <img src="../assets/images/toggle.svg" alt="" class="mx-1 me-2">
+                        <img src="@/assets/images/toggle.svg" alt="" class="mx-1 me-2">
                         <span class="menu-text">Menyuni yopish</span>
                     </button>
                 </div>
@@ -109,41 +114,6 @@ function showToast() {
                 data-bs-target="#modalAdd">
                     Foydalanuvchi qo'shish
             </button>
-        </div>
-
-        <!-- Modal for add -->
-        <div class="modal fade" id="modalAdd" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Foydalanuvchi qo'shish</h1>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="name" class="col-form-label">Ism*</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label">Email*</label>
-                                <input type="text" class="form-control" id="email" placeholder="example@mail.com" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="col-form-label">Parol*</label>
-                                <input type="text" class="form-control" id="password" placeholder="Parol" />
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button"
-                                @click="showToast"
-                                class="btn btn-primary"
-                                data-bs-dismiss="modal">
-                            Qo'shish
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Company select -->
@@ -204,7 +174,7 @@ function showToast() {
                 <tbody>
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
-                            <img class="rounded-circle me-3" src="../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
+                            <img class="rounded-circle me-3" src="@/assets/images/lindsey_stroud.png" alt="" width="24" height="24">
                             <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
@@ -223,7 +193,7 @@ function showToast() {
                     </tr>
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                            <img class="rounded-circle me-3" src="../assets/images/nicci_troiani.png" alt="" width="24" height="24">
+                            <img class="rounded-circle me-3" src="@/assets/images/nicci_troiani.png" alt="" width="24" height="24">
                             <span class="fw-medium fs-15 text-p-muted">Nicci Troiani</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
@@ -238,7 +208,7 @@ function showToast() {
                     </tr>
                     <tr>
                         <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                            <img class="rounded-circle me-3" src="../assets/images/george_fields.png" alt="" width="24" height="24">
+                            <img class="rounded-circle me-3" src="@/assets/images/george_fields.png" alt="" width="24" height="24">
                             <span class="fw-medium fs-15 text-p-muted">George Fields</span>
                         </td>
                         <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
@@ -255,8 +225,70 @@ function showToast() {
             </table>
         </div>
 
+        <!-- Modal for add -->
+        <div class="modal fade bg-white bg-opacity-75"
+             id="modalAdd"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-add">
+                <div class="modal-content rounded-0 shadow border-0">
+                    <div class="modal-header justify-content-center">
+                        <h1 class="modal-title font-poppins fw-semibold fs-13" id="staticBackdropLabel">
+                            Foydalanuvchi qo'shish
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="name" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                    Ism<span class="text-p-blue">*</span>
+                                </label>
+                                <input type="text"
+                                       class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                       id="name"
+                                       placeholder="Name" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                    Email<span class="text-p-blue">*</span>
+                                </label>
+                                <input type="text"
+                                       class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                       id="email"
+                                       placeholder="example@mail.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                    Parol<span class="text-p-blue">*</span>
+                                </label>
+                                <input type="text"
+                                       class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                       id="password"
+                                       placeholder="Parol" />
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button"
+                                        @click="showToast"
+                                        class="btn btn-primary rounded-1 btn-modal-add font-poppins fw-normal fs-13"
+                                        data-bs-dismiss="modal">
+                                    Qo'shish
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Modal for edit -->
-        <div class="modal fade" id="modalChange" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalChangeLabel" aria-hidden="true">
+        <div class="modal fade"
+             id="modalChange"
+             data-bs-backdrop="static"
+             data-bs-keyboard="true"
+             tabindex="-1"
+             aria-labelledby="modalChangeLabel"
+             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -291,7 +323,13 @@ function showToast() {
         </div>
 
         <!-- Modal for delete -->
-        <div class="modal fade" id="modalDelete" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="modalDeleteLabel" aria-hidden="true">
+        <div class="modal fade"
+             id="modalDelete"
+             data-bs-backdrop="static"
+             data-bs-keyboard="true"
+             tabindex="-1"
+             aria-labelledby="modalDeleteLabel"
+             aria-hidden="true">
             <div class="modal-dialog modal-dialog-top">
                 <div class="modal-content">
                     <div class="modal-body d-flex justify-content-between align-items-center">
@@ -354,8 +392,9 @@ input, select {
 .text-p-gray { color: #707683; }
 
 /* BACKGROUND COLOR */
-.bg-p-green { color: #34d47e; }
-.bg-p-red { color: #f7685b; }
+.bg-p-blue { background-color: #109cf1; }
+.bg-p-green { background-color: #34d47e; }
+.bg-p-red { background-color: #f7685b; }
 
 /* General style - end */
 
@@ -398,7 +437,38 @@ input, select {
     background-color: #109cf1;
     border-color: #109cf1;
 }
+
+.btn-modal-add {
+    height: 29px;
+    padding: 2px 27px !important;
+    background-color: #109cf1;
+    border-color: #109cf1;
+}
+
+.btn-modal-add:focus {
+    box-shadow: 0 0 0 1px #109cf1;
+}
 /* Buttons - end */
+
+/* Modal - start */
+.modal-add {
+    width: 318px !important;
+}
+
+.modal-header {
+    height: 50px !important;
+}
+
+.form-control::placeholder {
+    opacity: 0.5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #109cf1;
+    background-color: rgb(16 156 241 / 0.16) !important;
+}
+/* Modal - end */
 
 /* Select company - start */
 .company select {
