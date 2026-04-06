@@ -2,68 +2,68 @@
 </script>
 
 <template>
-
-    <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col mx-4">
-                <div class="row g-2 justify-content-between">
-                    <div class="col search me-1 mb-1">
-                        <img src="" alt="">
-                        <input type="text" class="w-100 align-middle" placeholder="Test" />
-                    </div>
-                    <div class="col search me-1 mb-1">
-                        <img src="" alt="">
-                        <input type="text" class="align-middle" placeholder="Test" />
-                    </div>
-                    <div class="col search me-1 mb-1">
-                        <img src="" alt="">
-                        <input type="text" class="align-middle" placeholder="Test" />
-                    </div>
-                    <div class="col search me-1 mb-1">
-                        <img src="" alt="">
-                        <input type="text" class="align-middle" placeholder="Test" />
+    <div class="container-fluid g-sm-0">
+        <div class="row g-sm-0">
+            <!-- Modal for add -->
+            <div class="modal fade bg-white bg-opacity-75"
+                 id="modalAdd"
+                 tabindex="-1"
+                 aria-labelledby="staticBackdropLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered modal-add">
+                    <div class="modal-content rounded-0 shadow border-0">
+                        <div class="modal-header justify-content-center">
+                            <h1 class="modal-title font-poppins fw-semibold fs-13" id="staticBackdropLabel">
+                                Foydalanuvchi qo'shish
+                            </h1>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="name" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                        Ism<span class="text-p-blue">*</span>
+                                    </label>
+                                    <input type="text"
+                                           class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                           id="name"
+                                           placeholder="Name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                        Email<span class="text-p-blue">*</span>
+                                    </label>
+                                    <input type="text"
+                                           class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                           id="email"
+                                           placeholder="example@mail.com" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                        Parol<span class="text-p-blue">*</span>
+                                    </label>
+                                    <input type="text"
+                                           class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                           id="password"
+                                           placeholder="Parol" />
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="button"
+                                            @click="showToast"
+                                            class="btn btn-primary rounded-1 btn-modal-add font-poppins fw-normal fs-13"
+                                            data-bs-dismiss="modal">
+                                        Qo'shish
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
-
-
-<div class="row g-3"> <!-- g-3: maydonlar orasidagi masofa (gutter) -->
-        
-    <!-- Har bir ustun: Mobil qurilmada 12 (100%), Planshet/PCda 6 (50%) -->
-    <div class="col-12 col-md-6">
-        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
-            <img src="https://flaticon.com" width="18" height="18" alt="search">
-            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 1...">
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6">
-        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
-            <img src="https://flaticon.com" width="18" height="18" alt="search">
-            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 2...">
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6">
-        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
-            <img src="https://flaticon.com" width="18" height="18" alt="search">
-            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 3...">
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6">
-        <div class="d-flex align-items-center border rounded-pill px-3 py-2 bg-white search-box">
-            <img src="https://flaticon.com" width="18" height="18" alt="search">
-            <input type="text" class="form-control border-0 bg-transparent ms-2" placeholder="Izlash 4...">
-        </div>
-    </div>
-
-</div>
-
-    
 </template>
 
 <style scoped>
