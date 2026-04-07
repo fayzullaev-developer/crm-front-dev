@@ -225,79 +225,6 @@ function showToast() {
             </table>
         </div>
 
-
-        <!-- Modal for edit -->
-        <div class="modal fade"
-             id="modalChange"
-             data-bs-backdrop="static"
-             data-bs-keyboard="true"
-             tabindex="-1"
-             aria-labelledby="modalChangeLabel"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="modalChangeLabel">O'zgartirish</h1>
-                    </div>
-                    <div class="modal-body">
-                        <form action="">
-                            <div class="mb-3">
-                                <label for="name" class="col-form-label">Ism*</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label">Email*</label>
-                                <input type="text" class="form-control" id="email" placeholder="example@mail.com" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="col-form-label">Parol*</label>
-                                <input type="text" class="form-control" id="password" placeholder="Parol" />
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button"
-                                @click="showToast"
-                                class="btn btn-primary"
-                                data-bs-dismiss="modal">
-                            O'zgartirish
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal for delete -->
-        <div class="modal fade"
-             id="modalDelete"
-             data-bs-backdrop="static"
-             data-bs-keyboard="true"
-             tabindex="-1"
-             aria-labelledby="modalDeleteLabel"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-top">
-                <div class="modal-content">
-                    <div class="modal-body d-flex justify-content-between align-items-center">
-                        <span class="mb-0">Rostdan ham o'chirilsinmi?</span>
-                        <div class="ms-3">
-                            <button type="button" class="btn btn-danger me-3">Ha</button>
-                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">Yo'q</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Toast -->
-        <div class="toast-container position-fixed start-50 toast-position translate-middle-x">
-            <div id="liveToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-                <div class="toast-body">
-                    <img src="@/assets/images/check.svg" class="rounded me-2" alt="">
-                    Ma'lumotlar muvaffaqiyatli qo'shildi
-                </div>
-            </div>
-        </div>
-        
     </div>
 
     <!-- Modal for add -->
@@ -352,6 +279,84 @@ function showToast() {
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for edit -->
+    <div class="modal fade"
+         id="modalChange"
+         data-bs-backdrop="static"
+         data-bs-keyboard="true"
+         tabindex="-1"
+         aria-labelledby="modalChangeLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalChangeLabel">O'zgartirish</h1>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="col-form-label">Ism*</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label">Email*</label>
+                            <input type="text" class="form-control" id="email" placeholder="example@mail.com" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="col-form-label">Parol*</label>
+                            <input type="text" class="form-control" id="password" placeholder="Parol" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"
+                            @click="showToast"
+                            class="btn btn-primary"
+                            data-bs-dismiss="modal">
+                        O'zgartirish
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for delete -->
+    <div class="modal fade"
+         id="modalDelete"
+         tabindex="-1"
+         aria-labelledby="modalDeleteLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-top modal-delete">
+            <div class="modal-content">
+                <div class="modal-body d-flex justify-content-between align-items-center">
+                    <span class="mb-0 font-poppins fw-normal fs-15">Rostdan ham o'chirilsinmi?</span>
+                    <div class="ms-3">
+                        <button type="button" class="btn btn-danger me-3 font-poppins fw-normal fs-15">Ha</button>
+                        <button type="button"
+                                class="btn btn-success font-poppins fw-normal fs-15"
+                                data-bs-dismiss="modal">
+                            Yo'q
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed start-50 toast-position translate-middle-x">
+        <div id="liveToast"
+             class="toast text-white bg-p-green rounded-1 border-0"
+             role="alert"
+             aria-live="assertive"
+             aria-atomic="true">
+            <div class="toast-body">
+                <img src="@/assets/images/check.svg" class="rounded me-2" alt="">
+                Ma'lumotlar muvaffaqiyatli qo'shildi
             </div>
         </div>
     </div>
@@ -461,6 +466,10 @@ input, select {
     height: 50px !important;
 }
 
+.modal-delete {
+    max-width: 513px !important;
+}
+
 .form-control::placeholder {
     opacity: 0.5;
 }
@@ -544,6 +553,11 @@ td {
 /* Table - end */
 
 /* toast style - start */
+.toast {
+    width: 312px;
+    box-shadow: none;
+}
+
 .toast-position {
     top: 50px !important;
 }
