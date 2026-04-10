@@ -325,19 +325,22 @@ function showToast() {
     </div>
 
     <!-- Modal for delete -->
-    <div class="modal fade"
+    <div class="modal fade bg-white bg-opacity-75"
          id="modalDelete"
          tabindex="-1"
          aria-labelledby="modalDeleteLabel"
          aria-hidden="true">
         <div class="modal-dialog modal-dialog-top modal-delete">
-            <div class="modal-content">
-                <div class="modal-body d-flex justify-content-between align-items-center">
+            <div class="modal-content rounded-min shadow border-0">
+                <div class="modal-body d-flex justify-content-between align-items-center px-4">
                     <span class="mb-0 font-poppins fw-normal fs-15">Rostdan ham o'chirilsinmi?</span>
                     <div class="ms-3">
-                        <button type="button" class="btn btn-danger me-3 font-poppins fw-normal fs-15">Ha</button>
+                        <button type="button" 
+                                class="btn btn-yes bg-p-red text-white rounded-min border-0 py-1 me-3 font-poppins fw-normal fs-15">
+                            Ha
+                        </button>
                         <button type="button"
-                                class="btn btn-success font-poppins fw-normal fs-15"
+                                class="btn btn-no bg-p-green text-white rounded-min border-0 py-1 font-poppins fw-normal fs-15"
                                 data-bs-dismiss="modal">
                             Yo'q
                         </button>
@@ -403,6 +406,7 @@ input, select {
 .bg-p-green { background-color: #34d47e; }
 .bg-p-red { background-color: #f7685b; }
 
+.rounded-min { border-radius: 2px; }
 /* General style - end */
 
 /* Sidebar - start */
@@ -454,6 +458,10 @@ input, select {
 
 .btn-modal-add:focus {
     box-shadow: 0 0 0 1px #109cf1;
+}
+
+.btn-yes, .btn-no {
+    width: 94px !important;
 }
 /* Buttons - end */
 
