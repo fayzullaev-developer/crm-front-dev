@@ -332,18 +332,18 @@ function showToast() {
          aria-hidden="true">
         <div class="modal-dialog modal-dialog-top modal-delete">
             <div class="modal-content rounded-min shadow border-0">
-                <div class="modal-body d-flex justify-content-between align-items-center px-4">
-                    <span class="mb-0 font-poppins fw-normal fs-15">Rostdan ham o'chirilsinmi?</span>
-                    <div class="ms-3">
-                        <button type="button" 
-                                class="btn btn-yes bg-p-red text-white rounded-min border-0 py-1 me-3 font-poppins fw-normal fs-15">
-                            Ha
-                        </button>
-                        <button type="button"
-                                class="btn btn-no bg-p-green text-white rounded-min border-0 py-1 font-poppins fw-normal fs-15"
-                                data-bs-dismiss="modal">
-                            Yo'q
-                        </button>
+                <div class="modal-body d-flex align-items-center px-4">
+                    <span class="mb-0 font-poppins fw-normal fs-15 text-break">Rost&shy;dan ham o'chi&shy;ril&shy;sin&shy;mi?</span>
+                    <div class="d-flex buttons ms-2 ms-sm-3 justify-content-end">
+                            <button type="button"
+                                    class="btn bg-p-red text-white rounded-min me-2 me-sm-3 border-0 py-1 font-poppins fw-normal fs-15">
+                                Ha
+                            </button>
+                            <button type="button"
+                                    class="btn bg-p-green text-white rounded-min border-0 py-1 font-poppins fw-normal fs-15"
+                                    data-bs-dismiss="modal">
+                                Yo'q
+                            </button>
                     </div>
                 </div>
             </div>
@@ -460,9 +460,20 @@ input, select {
     box-shadow: 0 0 0 1px #109cf1;
 }
 
-.btn-yes, .btn-no {
-    width: 94px !important;
+.buttons {
+    flex: 1;
 }
+
+.buttons button {
+    min-width: 60px;
+    width: clamp(60px, 100%, 94px);
+}
+
+/*
+.btn-yes button, .btn-no button {
+    width: 100%;
+}
+
 /* Buttons - end */
 
 /* Modal - start */
