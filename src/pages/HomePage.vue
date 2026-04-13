@@ -468,12 +468,6 @@ input, select {
     min-width: 60px;
     width: clamp(60px, 100%, 94px);
 }
-
-/*
-.btn-yes button, .btn-no button {
-    width: 100%;
-}
-
 /* Buttons - end */
 
 /* Modal - start */
