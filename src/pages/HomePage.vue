@@ -325,7 +325,7 @@ function showToast() {
     </div>
 
     <!-- Modal for delete -->
-    <div class="modal fade bg-white bg-opacity-75"
+    <div class="modal fade"
          data-bs-backdrop="false"
          id="modalDelete"
          tabindex="-1"
@@ -485,6 +485,9 @@ input, select {
 }
 
 .modal-delete {
+    margin-top: 34px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     max-width: 513px !important;
 }
 
