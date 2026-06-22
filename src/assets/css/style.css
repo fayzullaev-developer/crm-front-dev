@@ -1,4 +1,93 @@
+/* General style - start */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #f5f6fa;
 }
+
+input, select {
+    outline: none;
+}
+
+/* FONTS */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-open-sans { font-family: 'Open Sans', sans-serif; }
+
+/* SIZE */
+.fs-11 { font-size: 11px; }
+.fs-12 { font-size: 12px; }
+.fs-13 { font-size: 13px; }
+.fs-14 { font-size: 14px; }
+.fs-15 { font-size: 15px; }
+.fs-18 { font-size: 18px; }
+
+/* .fs-16 { font-size: 16px; }
+    .fs-24 { font-size: 24px; } */
+
+/* WEIGHT
+    .fw-p-thin { font-weight: 100; }
+    .fw-p-ex-light { font-weight: 200; }
+    .fw-p-ex-bold { font-weight: 800; }
+    .fw-p-black { font-weight: 900; } */
+
+/* TEXT COLOR */
+.text-p-blue { color: #109cf1; }
+.text-p-dark { color: #334d6e; }
+.text-p-muted { color: #323c47; }
+.text-p-gray { color: #707683; }
+
+/* BACKGROUND COLOR */
+.bg-p-blue { background-color: #109cf1; }
+.bg-p-green { background-color: #34d47e; }
+.bg-p-red { background-color: #f7685b; }
+
+.rounded-min { border-radius: 2px; }
+/* General style - end */
+
+/* Modal - start */
+.modal-width {
+    width: 318px !important;
+}
+
+.modal-header {
+    height: 50px !important;
+}
+
+.modal-delete {
+    margin-top: 34px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 513px !important;
+}
+
+.form-control::placeholder {
+    opacity: 0.5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #109cf1;
+    background-color: rgb(16 156 241 / 0.16) !important;
+}
+/* Modal - end */
+
+/* Button - start */
+.btn-modal {
+    height: 29px;
+    padding: 2px 27px !important;
+    background-color: #109cf1;
+    border-color: #109cf1;
+}
+
+.btn-modal:focus {
+    box-shadow: 0 0 0 1px #109cf1;
+}
+
+.buttons {
+    flex: 1;
+}
+
+.buttons button {
+    min-width: 60px;
+    width: clamp(60px, 100%, 94px);
+}
+/* Button - end */
