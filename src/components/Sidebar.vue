@@ -45,22 +45,22 @@ function toggleSidebar() {
             <!-- Menu -->
             <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
                 <li class="nav-item">
-                    <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" href="#">
+                    <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" to="/">
                         <img src="@/assets/images/contacts-active.svg" alt="" class="me-2">
                         <span class="menu-text">Foydalanuvchi qo'shish</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
+                    <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" to="/company-page">
                         <img src="@/assets/images/company.svg" alt="" class="me-2">
                         <span class="menu-text">Kompaniyalar</span>
-                    </a>
+                    </router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
+                    <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" to="/client-page">
                         <img src="@/assets/images/clients.svg" alt="" class="me-2">
                         <span class="menu-text">Mijozlar</span>
-                    </a>
+                    </router-link>
                 </li>
             </ul>
 
