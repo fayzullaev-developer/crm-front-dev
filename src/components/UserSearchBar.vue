@@ -54,6 +54,7 @@
 .search input {
     flex-grow: 1;
     border: none;
+    font-size: 12px;
 }
 
 .search input::placeholder {

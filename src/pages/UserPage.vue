@@ -5,7 +5,7 @@ import ModalAdd from "@/components/ModalAdd.vue";
 import ModalEdit from "@/components/ModalEdit.vue";
 import ModalDelete from "@/components/ModalDelete.vue";
 import ToastNotification from "@/components/ToastNotification.vue";
-import SearchBar from "@/components/SearchBar.vue";
+import UserSearchBar from "@/components/UserSearchBar.vue";
 import UserTable from "@/components/UserTable.vue";
 
 </script>
@@ -17,7 +17,7 @@ import UserTable from "@/components/UserTable.vue";
 
     <div class="col mx-sm-4 mx-auto">
         <ControlPanel />
-        <SearchBar />
+        <UserSearchBar />
         <UserTable />
     </div>
 
