@@ -18,12 +18,14 @@
                     </span>
                     <div class="d-flex buttons ms-2 ms-sm-3 justify-content-end">
                         <button type="button"
+                                id="btn-yes"
                                 class="btn bg-p-red text-white rounded-min me-2 me-sm-3
-                                        border-0 py-1 font-poppins fw-normal fs-15">
+                                        border-1 py-1 font-poppins fw-normal fs-15">
                             Ha
                         </button>
                         <button type="button"
-                                class="btn bg-p-green text-white rounded-min border-0 py-1
+                                id="btn-no"
+                                class="btn bg-p-green text-white rounded-min border-1 py-1
                                         font-poppins fw-normal fs-15"
                                 data-bs-dismiss="modal">
                             Yo'q
@@ -37,5 +39,29 @@
 </template>
 
 <style scoped>
+.buttons {
+    flex: 1;
+}
 
+.buttons button {
+    min-width: 60px;
+    width: clamp(60px, 100%, 94px);
+}
+
+#btn-yes:hover,
+#btn-yes:focus {
+    color: #f7685b !important;
+    background-color: white;
+}
+
+#btn-no:hover,
+#btn-no:focus {
+    color: #34d47e !important;
+    background-color: white;
+}
+
+.buttons > button:hover,
+.buttons > button:focus {
+    border: 1px solid currentColor !important;
+}
 </style>

@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-    <button type="button" class="btn btn-primary" style="min-width: 25%;">
+    <button type="button" class="btn btn-primary btn-p">
         <span>{{ text }}</span>
         <span v-if="loading" class="spinner-border spinner-border-sm text-light"></span>
     </button>

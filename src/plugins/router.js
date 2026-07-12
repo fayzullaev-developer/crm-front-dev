@@ -24,6 +24,13 @@ const routes = [
         }
     },
     {
+        path: '/settings',
+        component: () => import('@/pages/SettinsPage.vue'),
+        meta: {
+            layout: defineAsyncComponent(() => import('@/layouts/DefaultLayout.vue'))
+        }
+    },
+    {
         path: '/login',
         component: () => import('@/pages/LoginPage.vue'),
         meta: {

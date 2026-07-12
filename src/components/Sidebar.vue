@@ -47,7 +47,7 @@ function toggleSidebar() {
                 <li class="nav-item">
                     <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" to="/">
                         <img src="@/assets/images/contacts-active.svg" alt="" class="me-2">
-                        <span class="menu-text">Foydalanuvchi qo'shish</span>
+                        <span class="menu-text">Foydalanuvchilar</span>
                     </router-link>
                 </li>
                 <li class="nav-item">
@@ -68,10 +68,10 @@ function toggleSidebar() {
 
             <!-- Settings -->
             <div class="nav px-4">
-                <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
+                <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" to="/settings">
                     <img src="@/assets/images/settings.svg" alt="" class="me-2">
                     <span class="menu-text">Sozlamalar</span>
-                </a>
+                </router-link>
             </div>
 
             <!-- Close menu -->

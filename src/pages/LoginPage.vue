@@ -20,11 +20,23 @@ function auth() {
         <div class="col-12 col-sm-8 col-md-6 col-xl-4">
             <h1 class="text-center font-poppins">Kirish</h1>
             <form>
-                <FormInput v-model="authorization.email" props-id="email" label-name="Email" input-type="email" />
-                <FormInput v-model="authorization.password" props-id="password" label-name="Parol" input-type="password" />
+                <FormInput
+                    v-model="authorization.email"
+                    props-id="email"
+                    label-name="Email"
+                    input-type="email"
+                    place-holder="name@example.com" />
+                <FormInput
+                    v-model="authorization.password"
+                    props-id="password"
+                    label-name="Parol"
+                    input-type="password" />
 
                 <div class="text-end">
-                    <FormButton @click="auth()" v-bind:loading="isLoading" text="Kirish" class="btn-primary" />
+                    <FormButton @click="auth()"
+                                v-bind:loading="isLoading"
+                                text="Kirish"
+                                class="col-12 col-md-6 col-lg-4" />
                 </div>
             </form>
         </div>
@@ -33,4 +45,10 @@ function auth() {
 
 <style scoped>
 
+</style>
+
+<style>
+body {
+    background-color: #fff;
+}
 </style>

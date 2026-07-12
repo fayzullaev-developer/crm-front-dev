@@ -9,6 +9,9 @@ defineProps({
     },
     inputType: {
         default: "text"
+    },
+    placeHolder: {
+        type: String
     }
 })
 
@@ -22,7 +25,9 @@ defineEmits(['update:modelValue'])
             @input="$emit('update:modelValue', $event.target.value)"
             v-bind:id="propsId"
             v-bind:type="inputType"
-            class="form-control">
+            class="form-control"
+            required
+            v-bind:placeholder="placeHolder">
     </div>
 </template>
 

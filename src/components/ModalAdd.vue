@@ -48,7 +48,7 @@
                         <div class="d-flex justify-content-center">
                             <button type="button"
                                     @click="showToast"
-                                    class="btn btn-primary rounded-1 btn-modal font-poppins fw-normal fs-13"
+                                    class="btn btn-primary rounded-1 btn-p btn-modal font-poppins fw-normal fs-13"
                                     data-bs-dismiss="modal">
                                 Qo'shish
                             </button>

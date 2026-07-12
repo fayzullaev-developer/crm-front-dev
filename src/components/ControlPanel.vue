@@ -18,7 +18,7 @@
         </nav>
         <button
             type="button"
-            class="btn btn-primary ms-auto m-2 btn-add font-poppins fw-medium fs-13"
+            class="btn btn-primary ms-auto m-2 btn-p btn-add font-poppins fw-medium fs-13"
             data-bs-toggle="modal"
             data-bs-target="#modalAdd">
             Foydalanuvchi qo'shish
@@ -43,8 +43,6 @@
     margin-top: 9px !important;
     margin-right: 12px !important;
     margin-bottom: 9px !important;
-    background-color: #109cf1;
-    border-color: #109cf1;
 }
 
 /* Select company - start */

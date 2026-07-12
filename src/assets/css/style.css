@@ -71,23 +71,18 @@ input, select {
 /* Modal - end */
 
 /* Button - start */
+.btn-p {
+    background-color: #109cf1;
+    border-color: #109cf1;
+}
+
 .btn-modal {
     height: 29px;
     padding: 2px 27px !important;
-    background-color: #109cf1;
-    border-color: #109cf1;
 }
 
 .btn-modal:focus {
     box-shadow: 0 0 0 1px #109cf1;
 }
 
-.buttons {
-    flex: 1;
-}
-
-.buttons button {
-    min-width: 60px;
-    width: clamp(60px, 100%, 94px);
-}
 /* Button - end */
