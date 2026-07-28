@@ -1,12 +1,12 @@
 <script setup>
 import Sidebar from "@/components/Sidebar.vue";
 import ControlPanel from "@/components/ControlPanel.vue";
-import ModalAdd from "@/components/ModalAdd.vue";
-import ModalEdit from "@/components/ModalEdit.vue";
 import ModalDelete from "@/components/ModalDelete.vue";
 import ToastNotification from "@/components/ToastNotification.vue";
-import UserSearchBar from "@/components/UserSearchBar.vue";
-import UserTable from "@/components/UserTable.vue";
+import UserSearchBar from "@/components/user/UserSearchBar.vue";
+import UserTable from "@/components/user/UserTable.vue";
+import UserModalAdd from "@/components/user/UserModalAdd.vue";
+import UserModalEdit from "@/components/user/UserModalEdit.vue";
 
 </script>
 
@@ -16,13 +16,13 @@ import UserTable from "@/components/UserTable.vue";
     </div>
 
     <div class="col mx-sm-4 mx-auto">
-        <ControlPanel />
+        <ControlPanel  button-text="Foydalanuvchi qo'shish"/>
         <UserSearchBar />
         <UserTable />
     </div>
 
-    <ModalAdd />
-    <ModalEdit />
+    <UserModalAdd />
+    <UserModalEdit />
     <ModalDelete />
     <ToastNotification />
 

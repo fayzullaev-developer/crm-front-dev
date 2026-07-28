@@ -1,12 +1,12 @@
 <script setup>
 import Sidebar from "@/components/Sidebar.vue";
 import ControlPanel from "@/components/ControlPanel.vue";
-import ModalAdd from "@/components/ModalAdd.vue";
-import ModalEdit from "@/components/ModalEdit.vue";
+import ClientModalAdd from "@/components/client/ClientModalAdd.vue";
+import ClientModalEdit from "@/components/client/ClientModalEdit.vue";
 import ModalDelete from "@/components/ModalDelete.vue";
 import ToastNotification from "@/components/ToastNotification.vue";
-import ClientSearchBar from "@/components/ClientSearchBar.vue";
-import ClientTable from "@/components/ClientTable.vue";
+import ClientSearchBar from "@/components/client/ClientSearchBar.vue";
+import ClientTable from "@/components/client/ClientTable.vue";
 
 </script>
 
@@ -16,13 +16,13 @@ import ClientTable from "@/components/ClientTable.vue";
     </div>
 
     <div class="col mx-sm-4 mx-auto">
-        <ControlPanel />
+        <ControlPanel button-text="Mijoz qo'shish" />
         <ClientSearchBar />
         <ClientTable />
     </div>
 
-    <ModalAdd />
-    <ModalEdit />
+    <ClientModalAdd />
+    <ClientModalEdit />
     <ModalDelete />
     <ToastNotification />
 

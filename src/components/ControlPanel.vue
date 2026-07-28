@@ -1,5 +1,12 @@
 <script setup>
+import FormButton from "@/components/tags/FormButton.vue";
 
+defineProps({
+    buttonText: {
+        type: String,
+        required: true,
+    }
+})
 </script>
 
 <template>
@@ -16,13 +23,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-        <button
-            type="button"
-            class="btn btn-primary ms-auto m-2 btn-p btn-add font-poppins fw-medium fs-13"
+        <FormButton
+            v-bind:text="buttonText"
+            class="ms-auto m-2 btn-add font-poppins fw-medium fs-13"
             data-bs-toggle="modal"
-            data-bs-target="#modalAdd">
-            Foydalanuvchi qo'shish
-        </button>
+            data-bs-target="#modalAdd"
+        />
     </div>
 
     <!-- Company select -->

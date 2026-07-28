@@ -18,7 +18,7 @@
             <tbody>
             <tr>
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
-                    <img class="rounded-circle me-3" src="@/assets/images/lindsey_stroud.png" alt="" width="24" height="24">
+                    <img class="rounded-circle me-3" src="../../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
                     <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
@@ -27,17 +27,17 @@
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
-                            <img src="@/assets/images/edit.svg" alt="edit">
+                            <img src="../../assets/images/edit.svg" alt="edit">
                         </button>
                         <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                            <img src="@/assets/images/delete.svg" alt="delete">
+                            <img src="../../assets/images/delete.svg" alt="delete">
                         </button>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                    <img class="rounded-circle me-3" src="@/assets/images/nicci_troiani.png" alt="" width="24" height="24">
+                    <img class="rounded-circle me-3" src="../../assets/images/nicci_troiani.png" alt="" width="24" height="24">
                     <span class="fw-medium fs-15 text-p-muted">Nicci Troiani</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
@@ -45,14 +45,14 @@
                 <td class="py-2 py-sm-3">14 minut oldin</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
-                        <img src="@/assets/images/edit.svg" alt="edit">
-                        <img src="@/assets/images/delete.svg" alt="delete">
+                        <img src="../../assets/images/edit.svg" alt="edit">
+                        <img src="../../assets/images/delete.svg" alt="delete">
                     </div>
                 </td>
             </tr>
             <tr>
                 <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                    <img class="rounded-circle me-3" src="@/assets/images/george_fields.png" alt="" width="24" height="24">
+                    <img class="rounded-circle me-3" src="../../assets/images/george_fields.png" alt="" width="24" height="24">
                     <span class="fw-medium fs-15 text-p-muted">George Fields</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
@@ -60,8 +60,8 @@
                 <td class="py-2 py-sm-3">6 minut oldin</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
-                        <img src="@/assets/images/edit.svg" alt="edit">
-                        <img src="@/assets/images/delete.svg" alt="delete">
+                        <img src="../../assets/images/edit.svg" alt="edit">
+                        <img src="../../assets/images/delete.svg" alt="delete">
                     </div>
                 </td>
             </tr>

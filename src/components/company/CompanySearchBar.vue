@@ -8,28 +8,28 @@
 
         <div class="col-12 col-md">
             <div class="d-flex search">
-                <img src="@/assets/images/search.svg" alt="">
+                <img src="../../assets/images/search.svg" alt="">
                 <input type="text" class="align-middle" placeholder="Kompaniyani qidirish" />
             </div>
         </div>
 
         <div class="col-12 col-md">
             <div class="d-flex search">
-                <img src="@/assets/images/search.svg" alt="">
+                <img src="../../assets/images/search.svg" alt="">
                 <input type="text" class="align-middle" placeholder="Emailni qidirish" />
             </div>
         </div>
 
         <div class="col-12 col-md">
             <div class="d-flex search">
-                <img src="@/assets/images/search.svg" alt="">
+                <img src="../../assets/images/search.svg" alt="">
                 <input type="text" class="align-middle" placeholder="Manzilni qidirish" />
             </div>
         </div>
 
         <div class="col-12 col-md">
             <div class="d-flex search">
-                <img src="@/assets/images/search.svg" alt="">
+                <img src="../../assets/images/search.svg" alt="">
                 <input type="text" class="align-middle" placeholder="So'nggi faollikni qidirish" />
             </div>
         </div>
