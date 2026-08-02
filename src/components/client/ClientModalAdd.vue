@@ -1,5 +1,9 @@
 <script setup>
+const emit = defineEmits(['saved'])
 
+const handleSave = () => {
+    emit('saved');
+}
 </script>
 
 <template>
@@ -20,7 +24,7 @@
                     <form action="">
                         <div class="mb-3">
                             <label for="name" class="col-form-label pt-1 font-poppins fw-normal fs-14">
-                                Ism<span class="text-p-blue">*</span>
+                                Ismi<span class="text-p-blue">*</span>
                             </label>
                             <input type="text"
                                    class="form-control rounded-2 font-poppins fw-normal fs-14"
@@ -36,18 +40,20 @@
                                    id="email"
                                    placeholder="example@mail.com" />
                         </div>
-                        <div class="mb-3">
-                            <label for="password" class="col-form-label pt-1 font-poppins fw-normal fs-14">
-                                Parol<span class="text-p-blue">*</span>
+                        <div class="mb-3 company">
+                            <label for="workplace" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                Ishlash joyi<span class="text-p-blue">*</span>
                             </label>
-                            <input type="text"
-                                   class="form-control rounded-2 font-poppins fw-normal fs-14"
-                                   id="password"
-                                   placeholder="Parol" />
+                            <select name="workplace" id="workplace" class="form-select rounded-2 font-poppins fw-normal fs-14">
+                                <option selected value="company-one">Kompaniya 1</option>
+                                <option value="company-two">Kompaniya 2</option>
+                                <option value="company-three">Kompaniya 3</option>
+                                <option value="company-four">Kompaniya 4</option>
+                            </select>
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="button"
-                                    @click="showToast"
+                                    @click="handleSave"
                                     class="btn btn-primary rounded-1 btn-p btn-modal font-poppins fw-normal fs-13"
                                     data-bs-dismiss="modal">
                                 Qo'shish
@@ -61,5 +67,7 @@
 </template>
 
 <style scoped>
-
+select {
+    cursor: pointer;
+}
 </style>

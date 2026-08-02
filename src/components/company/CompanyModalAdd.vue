@@ -20,7 +20,7 @@
                     <form action="">
                         <div class="mb-3">
                             <label for="name" class="col-form-label pt-1 font-poppins fw-normal fs-14">
-                                Ism<span class="text-p-blue">*</span>
+                                Nomi<span class="text-p-blue">*</span>
                             </label>
                             <input type="text"
                                    class="form-control rounded-2 font-poppins fw-normal fs-14"
@@ -37,13 +37,13 @@
                                    placeholder="example@mail.com" />
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="col-form-label pt-1 font-poppins fw-normal fs-14">
-                                Parol<span class="text-p-blue">*</span>
+                            <label for="address" class="col-form-label pt-1 font-poppins fw-normal fs-14">
+                                Manzili<span class="text-p-blue">*</span>
                             </label>
                             <input type="text"
                                    class="form-control rounded-2 font-poppins fw-normal fs-14"
-                                   id="password"
-                                   placeholder="Parol" />
+                                   id="address"
+                                   placeholder="Address" />
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="button"

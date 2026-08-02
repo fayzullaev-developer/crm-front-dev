@@ -4,7 +4,7 @@
 
 <template>
     <!-- Searching -->
-    <div class="row g-2 justify-content-between">
+    <div class="row mt-1 g-2 justify-content-between">
 
         <div class="col-12 col-md">
             <div class="d-flex search">

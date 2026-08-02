@@ -1,10 +1,21 @@
 <script setup>
+defineProps({
+    text: {
+        type: String,
+        default: '',
+    }
+})
+
 // toast'ni ishga tushirish
 function showToast() {
     const element = document.getElementById('liveToast');
     const toast = window.bootstrap.Toast.getOrCreateInstance(element);
     toast.show();
 }
+
+defineExpose({
+    showToast
+})
 
 </script>
 
@@ -18,7 +29,7 @@ function showToast() {
              aria-atomic="true">
             <div class="toast-body">
                 <img src="@/assets/images/check.svg" class="rounded me-2" alt="">
-                Ma'lumotlar muvaffaqiyatli qo'shildi
+                {{ text }}
             </div>
         </div>
     </div>

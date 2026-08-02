@@ -1,6 +1,6 @@
 <script setup>
 import Sidebar from "@/components/Sidebar.vue";
-import FormButton from "@/components/tags/FormButton.vue";
+import ControlPanel from "@/components/ControlPanel.vue";
 </script>
 
 <template>
@@ -9,9 +9,9 @@ import FormButton from "@/components/tags/FormButton.vue";
     </div>
 
     <div class="col mx-sm-4 mx-auto">
-        <div class="m-4">
+        <ControlPanel button-text="Chiqish" />
+        <div class="mt-4">
             <p>Bu yerda sozlamalar joylashadi</p>
-            <FormButton text="Chiqish" />
         </div>
     </div>
 

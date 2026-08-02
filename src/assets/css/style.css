@@ -63,7 +63,8 @@ input, select {
     opacity: 0.5;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     box-shadow: none;
     border-color: #109cf1;
     background-color: rgb(16 156 241 / 0.16) !important;
