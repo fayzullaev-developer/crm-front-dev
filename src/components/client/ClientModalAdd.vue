@@ -1,9 +1,14 @@
 <script setup>
-const emit = defineEmits(['saved'])
+import {useToastStore} from "@/stores/toast.js";
 
-const handleSave = () => {
-    emit('saved');
+const toastStore = useToastStore()
+
+const handleAdd = () => {
+    // API request...
+
+    toastStore.show("Mijoz muvaffaqiyatli qo'shildi!")
 }
+
 </script>
 
 <template>
@@ -53,7 +58,7 @@ const handleSave = () => {
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="button"
-                                    @click="handleSave"
+                                    @click="handleAdd"
                                     class="btn btn-primary rounded-1 btn-p btn-modal font-poppins fw-normal fs-13"
                                     data-bs-dismiss="modal">
                                 Qo'shish

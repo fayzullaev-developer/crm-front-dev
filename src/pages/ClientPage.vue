@@ -8,17 +8,7 @@ import ToastNotification from "@/components/ToastNotification.vue";
 import ClientSearchBar from "@/components/client/ClientSearchBar.vue";
 import ClientTable from "@/components/client/ClientTable.vue";
 import SelectFilter from "@/components/SelectFilter.vue";
-import {ref} from "vue";
 
-const toast = ref(null);
-const toastText = ref("");
-
-const trigger = (message) => {
-    toastText.value = message;
-    if (toast.value) {
-        toast.value.showToast();
-    }
-}
 </script>
 
 <template>
@@ -33,10 +23,10 @@ const trigger = (message) => {
         <ClientTable />
     </div>
 
-    <ClientModalAdd @saved="trigger('Mijoz muvaffaqiyatli qo\'shildi!')" />
+    <ClientModalAdd />
     <ClientModalEdit />
     <ModalDelete />
-    <ToastNotification v-bind:text="toastText" ref="toast" />
+    <ToastNotification />
 
 </template>
 

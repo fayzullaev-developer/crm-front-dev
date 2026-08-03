@@ -1,5 +1,13 @@
 <script setup>
+import {useToastStore} from "@/stores/toast.js";
 
+const toastStore = useToastStore()
+
+const handleEdit = () => {
+    // api request...
+
+    toastStore.show("Foydalanuvchi muvaffaqiyatli o'zgartirildi!")
+}
 </script>
 
 <template>
@@ -47,7 +55,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <button type="button"
-                                    @click="showToast"
+                                    @click="handleEdit"
                                     class="btn btn-primary rounded-1 btn-p btn-modal font-poppins fw-normal fs-13"
                                     data-bs-dismiss="modal">
                                 O'zgartirish

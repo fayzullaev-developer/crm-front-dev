@@ -1,15 +1,15 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import * as bootstrap from 'bootstrap'
 import '@/assets/css/style.css'
 import '@fontsource/poppins'
 import '@fontsource/open-sans'
 import router from '@/plugins/router.js'
+import {createPinia} from "pinia";
 
 createApp(App)
+    .use(createPinia())
     .use(router)
     .mount('#app')
 
-window.bootstrap = bootstrap
 document.querySelector('html').setAttribute('lang', 'en')
