@@ -1,5 +1,13 @@
 <script setup>
+import {useToastStore} from "@/stores/toast.js";
 
+const toastStore = useToastStore()
+
+const handleDelete = () => {
+    // api request...
+
+    toastStore.show("Mijoz muvaffaqiyatli o'chirildi!")
+}
 </script>
 
 <template>
@@ -18,6 +26,8 @@
                     </span>
                     <div class="d-flex buttons ms-2 ms-sm-3 justify-content-end">
                         <button type="button"
+                                @click="handleDelete"
+                                data-bs-dismiss="modal"
                                 id="btn-yes"
                                 class="btn bg-p-red text-white rounded-min me-2 me-sm-3
                                         border-1 py-1 font-poppins fw-normal fs-15">
