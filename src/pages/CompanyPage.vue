@@ -25,7 +25,7 @@ import CompanyModalEdit from "@/components/company/CompanyModalEdit.vue";
 
     <CompanyModalAdd />
     <CompanyModalEdit />
-    <ModalDelete />
+    <ModalDelete toast-text="Kompaniya muvaffaqiyatli o'chirildi!"/>
     <ToastNotification />
 
 </template>

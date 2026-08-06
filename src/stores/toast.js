@@ -1,11 +1,11 @@
 import {defineStore} from "pinia";
-import {ref} from "vue";
+import {ref, shallowRef} from "vue";
 import {Toast} from "bootstrap";
 
 export const useToastStore = defineStore(
     'toast', () => {
         const text = ref('')
-        const toastInstance = ref(null)
+        const toastInstance = shallowRef(null)
 
         const initToast = (element) => {
             if (element) {

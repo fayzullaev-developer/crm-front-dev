@@ -10,8 +10,8 @@
             <tr>
                 <th scope="col" class="ps-3 ps-md-4 py-2 py-sm-3 align-middle text-break">Mi<wbr>joz<wbr>lar<wbr> (Ism)</th>
                 <th scope="col" class="py-2 py-sm-3 align-middle text-break">Email</th>
-                <th scope="col" class="py-2 py-sm-3 align-middle text-break">Ishlash joyi</th>
-                <th scope="col" class="py-2 py-sm-3 align-middle text-break">So'nggi faollik</th>
+                <th scope="col" class="py-2 py-sm-3 align-middle text-break">Ish<wbr>lash jo<wbr>yi</th>
+                <th scope="col" class="py-2 py-sm-3 align-middle text-break">So'ng<wbr>gi faol<wbr>lik</th>
                 <th scope="col" class="pe-3 pe-md-4 py-2 py-sm-3 action-col"></th>
             </tr>
             </thead>
@@ -22,7 +22,7 @@
                     <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
-                <td class="py-2 py-sm-3">Kompaniya 1</td>
+                <td class="py-2 py-sm-3 text-break">Kompaniya 1</td>
                 <td class="py-2 py-sm-3 text-break">5 minut oldin</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
@@ -38,10 +38,10 @@
             <tr>
                 <td class="ps-3 ps-md-4 py-2 py-sm-3">
                     <img class="rounded-circle me-3" src="../../assets/images/nicci_troiani.png" alt="" width="24" height="24">
-                    <span class="fw-medium fs-15 text-p-muted">Nicci Troiani</span>
+                    <span class="fw-medium fs-15 text-p-muted text-break">Nicci Troiani</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
-                <td class="py-2 py-sm-3">Kompaniya 2</td>
+                <td class="py-2 py-sm-3 text-break">Kompaniya 2</td>
                 <td class="py-2 py-sm-3">14 minut oldin</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
@@ -53,10 +53,10 @@
             <tr>
                 <td class="ps-3 ps-md-4 py-2 py-sm-3">
                     <img class="rounded-circle me-3" src="../../assets/images/george_fields.png" alt="" width="24" height="24">
-                    <span class="fw-medium fs-15 text-p-muted">George Fields</span>
+                    <span class="fw-medium fs-15 text-p-muted text-break">George Fields</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
-                <td class="py-2 py-sm-3">Kompaniya 3</td>
+                <td class="py-2 py-sm-3 text-break">Kompaniya 3</td>
                 <td class="py-2 py-sm-3">6 minut oldin</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">

@@ -23,7 +23,7 @@ import UserModalEdit from "@/components/user/UserModalEdit.vue";
 
     <UserModalAdd />
     <UserModalEdit />
-    <ModalDelete />
+    <ModalDelete toast-text="Foydalanuvchi muvaffaqiyatli o'chirildi!" />
     <ToastNotification />
 
 </template>

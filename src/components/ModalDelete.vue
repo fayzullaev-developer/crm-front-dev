@@ -1,12 +1,21 @@
 <script setup>
 import {useToastStore} from "@/stores/toast.js";
 
+const props = defineProps({
+    toastText: {
+        type: String,
+        required: true
+    }
+})
+
 const toastStore = useToastStore()
 
 const handleDelete = () => {
     // api request...
 
-    toastStore.show("Mijoz muvaffaqiyatli o'chirildi!")
+    toastStore.show(props.toastText)
+
+    // table reload...
 }
 </script>
 

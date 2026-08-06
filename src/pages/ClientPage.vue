@@ -25,7 +25,7 @@ import SelectFilter from "@/components/SelectFilter.vue";
 
     <ClientModalAdd />
     <ClientModalEdit />
-    <ModalDelete />
+    <ModalDelete toast-text="Mijoz muvaffaqiyatli o'chirildi!"/>
     <ToastNotification />
 
 </template>
