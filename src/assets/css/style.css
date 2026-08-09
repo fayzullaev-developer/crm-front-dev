@@ -1,4 +1,12 @@
 /* General style - start */
+/* android uchun */
+html, body {
+    height: auto !important; /* Majburiy 100% yoki 100vh bo'lsa, skrol buziladi */
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: visible !important; /* Skrolni majburiy yoqish */
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #f5f6fa;
