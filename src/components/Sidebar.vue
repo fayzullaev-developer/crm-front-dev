@@ -21,8 +21,8 @@ onMounted(() => {
     const sidebar = document.getElementById('sidebar');
 
     if (isCollapsed.value) {
-        offcanvas?.classList.add('collapsed');
-        sidebar?.classList.add('collapsed');
+        offcanvas?.classList.add('sidebar-collapsed');
+        sidebar?.classList.add('sidebar-collapsed');
     }
 })
 
@@ -30,8 +30,8 @@ function toggleSidebar() {
     const offcanvas = document.getElementById('offcanvasNavigation');
     const sidebar = document.getElementById('sidebar');
 
-    offcanvas.classList.toggle('collapsed');
-    sidebar.classList.toggle('collapsed');
+    offcanvas.classList.toggle('sidebar-collapsed');
+    sidebar.classList.toggle('sidebar-collapsed');
 
     isCollapsed.value = !isCollapsed.value
     localStorage.setItem('sidebarCollapsed', isCollapsed.value)
@@ -44,6 +44,7 @@ function toggleSidebar() {
     <div class="offcanvas-lg offcanvas-start"
          tabindex="-1"
          id="offcanvasNavigation"
+         data-bs-backdrop="true"
          aria-labelledby="offcanvasNavigationLabel">
 
         <!-- Sidebar -->
@@ -145,25 +146,22 @@ function toggleSidebar() {
     min-height: 100svh;
 }
 
-.offcanvas-start.collapsed {
+.offcanvas-start.sidebar-collapsed,
+.sidebar.sidebar-collapsed {
     width: 68px;
 }
 
-.sidebar.collapsed {
-    width: 68px;
-}
-
-.sidebar.collapsed .company-name-short {
+.sidebar.sidebar-collapsed .company-name-short {
     display: flex !important;
 }
 
-.sidebar.collapsed .company-name,
-.sidebar.collapsed .profile-info,
-.sidebar.collapsed .menu-text {
+.sidebar.sidebar-collapsed .company-name,
+.sidebar.sidebar-collapsed .profile-info,
+.sidebar.sidebar-collapsed .menu-text {
     display: none !important;
 }
 
-.sidebar.collapsed .profile {
+.sidebar.sidebar-collapsed .profile {
     padding: 8px 11px 0 !important;
 }
 /* Sidebar - end */
