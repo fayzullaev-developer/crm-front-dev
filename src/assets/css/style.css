@@ -3,7 +3,6 @@
 html, body {
     height: auto !important; /* Majburiy 100% yoki 100vh bo'lsa, skrol buziladi */
     min-height: 100%;
-    overflow-x: hidden;
     overflow-y: visible !important; /* Skrolni majburiy yoqish */
 }
 

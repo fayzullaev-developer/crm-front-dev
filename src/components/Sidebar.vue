@@ -18,20 +18,16 @@ const isCollapsed = ref(localStorage.getItem('sidebarCollapsed') === 'true')
 
 onMounted(() => {
     const offcanvas = document.getElementById('offcanvasNavigation');
-    const sidebar = document.getElementById('sidebar');
 
     if (isCollapsed.value) {
         offcanvas?.classList.add('sidebar-collapsed');
-        sidebar?.classList.add('sidebar-collapsed');
     }
 })
 
 function toggleSidebar() {
     const offcanvas = document.getElementById('offcanvasNavigation');
-    const sidebar = document.getElementById('sidebar');
 
     offcanvas.classList.toggle('sidebar-collapsed');
-    sidebar.classList.toggle('sidebar-collapsed');
 
     isCollapsed.value = !isCollapsed.value
     localStorage.setItem('sidebarCollapsed', isCollapsed.value)
@@ -41,14 +37,13 @@ function toggleSidebar() {
 
 <template>
     <!-- Sidebar and offcanvas -->
-    <div class="offcanvas-lg offcanvas-start"
+    <div class="offcanvas-lg offcanvas-start sidebar shadow d-flex flex-column p-0"
          tabindex="-1"
          id="offcanvasNavigation"
          data-bs-backdrop="true"
          aria-labelledby="offcanvasNavigationLabel">
 
         <!-- Sidebar -->
-        <aside class="sidebar shadow d-flex flex-column p-0" id="sidebar">
             <!-- Logo -->
             <div class="p-3 align-items-center">
                     <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">
@@ -133,20 +128,18 @@ function toggleSidebar() {
                     <span class="menu-text">Menyuni yopish</span>
                 </button>
             </div>
-        </aside>
     </div>
 </template>
 
 <style scoped>
 
 /* Sidebar - start */
-.sidebar, .offcanvas-start {
+.sidebar {
     width: 256px;
     background: #fff;
     min-height: 100svh;
 }
 
-.offcanvas-start.sidebar-collapsed,
 .sidebar.sidebar-collapsed {
     width: 68px;
 }
