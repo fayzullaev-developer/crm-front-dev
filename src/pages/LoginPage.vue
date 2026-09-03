@@ -2,7 +2,10 @@
 import FormInput from "@/components/tags/FormInput.vue";
 import FormButton from "@/components/tags/FormButton.vue";
 import {reactive, ref} from "vue";
+import {useAuthorization} from "@/stores/user/authorization.js";
+import {useRouter} from "vue-router";
 
+const router = useRouter();
 let isLoading = ref(false);
 let authorization = reactive({
     email: "",
@@ -11,7 +14,10 @@ let authorization = reactive({
 
 function auth() {
     isLoading.value = true;
-    console.log('token olindi');
+    useAuthorization().userAuth(authorization)
+        .then(() => {
+            router.push("/");
+        })
 }
 </script>
 

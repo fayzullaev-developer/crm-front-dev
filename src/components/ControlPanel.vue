@@ -1,6 +1,6 @@
 <script setup>
 import FormButton from "@/components/tags/FormButton.vue";
-import { Offcanvas} from "bootstrap";
+import {Offcanvas} from "bootstrap";
 
 defineProps({
     buttonText: {
@@ -19,12 +19,11 @@ function openMenu() {
 </script>
 
 <template>
-    <!-- Add -->
     <div class="d-flex bg-white justify-content-end">
         <nav class="navbar navbar-expand-lg justify-content-between ms-2">
             <button class="navbar-toggler"
                     type="button"
-                    @click="openMenu"
+                    @click="openMenu()"
                     aria-controls="offcanvasNavigation"
                     aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -38,7 +37,6 @@ function openMenu() {
             data-bs-target="#modalAdd"
         />
     </div>
-
 </template>
 
 <style scoped>

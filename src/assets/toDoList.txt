@@ -1,0 +1,12 @@
+1.
+2.
+3.
+
+Frontend:
+
+-- bajarilganlar --
+
+4. Avtorizatsiyadan o'tishni sozlash
+3. Namuna kompaniyalarni yozib chiqish.
+2. Sidebar'da yopiq turganda boshqa listga o'tsa, ochilib ketyapti. Shuni sozlash kerak.
+1. Sozlamalarga yangi sahifa yaratish va unga chiqish tugmasini qo'shish.
