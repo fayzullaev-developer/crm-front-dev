@@ -1,11 +1,13 @@
 1.
 2.
-3.
+3. test page'ni olib tashlash
 
 Frontend:
 
 -- bajarilganlar --
 
+6. logout funksiyasi va navigation guard ni qo'shish
+5. Kompaniyalar ro'yhatini olish (getCompanies)
 4. Avtorizatsiyadan o'tishni sozlash
 3. Namuna kompaniyalarni yozib chiqish.
 2. Sidebar'da yopiq turganda boshqa listga o'tsa, ochilib ketyapti. Shuni sozlash kerak.
