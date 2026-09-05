@@ -1,5 +1,5 @@
 <script setup>
-import {computed, reactive} from "vue";
+import {computed} from "vue";
 import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 
 useFetchCompanies().companiesGet()

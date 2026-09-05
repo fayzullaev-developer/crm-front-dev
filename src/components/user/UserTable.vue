@@ -1,5 +1,9 @@
 <script setup>
+import {useFetchUsers} from "@/stores/user/getUsers.js";
+import {computed} from "vue";
 
+useFetchUsers().usersGet()
+const users = computed(() => useFetchUsers().state.users)
 </script>
 
 <template>
@@ -16,14 +20,23 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+            <tr
+                v-for="user in users"
+                v-bind:key="user.id"
+            >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
-                    <img class="rounded-circle me-3" src="../../assets/images/lindsey_stroud.png" alt="" width="24" height="24">
-                    <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
+                    <img
+                        class="rounded-circle me-3"
+                        v-bind:src="'http://localhost:8505' + user.image.contentUrl"
+                        alt=""
+                        width="24"
+                        height="24"
+                    >
+                    <span class="fw-medium fs-15 text-p-muted text-break">{{ user.givenName }}</span>
                 </td>
-                <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
-                <td class="py-2 py-sm-3 text-break">12345678</td>
-                <td class="py-2 py-sm-3 text-break">5 minut oldin</td>
+                <td class="py-2 py-sm-3 text-break">{{ user.email }}</td>
+                <td class="py-2 py-sm-3 text-break">{{ user.passwordVisible }}</td>
+                <td class="py-2 py-sm-3 text-break">{{ user.lastActivityAt }}</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
@@ -32,36 +45,6 @@
                         <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
                             <img src="../../assets/images/delete.svg" alt="delete">
                         </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                    <img class="rounded-circle me-3" src="../../assets/images/nicci_troiani.png" alt="" width="24" height="24">
-                    <span class="fw-medium fs-15 text-p-muted text-break">Nicci Troiani</span>
-                </td>
-                <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
-                <td class="py-2 py-sm-3 text-break">12345678</td>
-                <td class="py-2 py-sm-3 text-break">14 minut oldin</td>
-                <td class="pe-3 pe-md-4 py-2 py-sm-3">
-                    <div class="d-flex justify-content-evenly">
-                        <img src="../../assets/images/edit.svg" alt="edit">
-                        <img src="../../assets/images/delete.svg" alt="delete">
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                    <img class="rounded-circle me-3" src="../../assets/images/george_fields.png" alt="" width="24" height="24">
-                    <span class="fw-medium fs-15 text-p-muted text-break">George Fields</span>
-                </td>
-                <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
-                <td class="py-2 py-sm-3 text-break">12345678</td>
-                <td class="py-2 py-sm-3 text-break">6 minut oldin</td>
-                <td class="pe-3 pe-md-4 py-2 py-sm-3">
-                    <div class="d-flex justify-content-evenly">
-                        <img src="../../assets/images/edit.svg" alt="edit">
-                        <img src="../../assets/images/delete.svg" alt="delete">
                     </div>
                 </td>
             </tr>
