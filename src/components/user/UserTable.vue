@@ -26,6 +26,7 @@ const users = computed(() => useFetchUsers().state.users)
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
+                        v-if="user.image.contentUrl"
                         class="rounded-circle me-3"
                         v-bind:src="'http://localhost:8505' + user.image.contentUrl"
                         alt=""

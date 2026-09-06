@@ -1,7 +1,8 @@
-1. Kompaniya, klient, user'ni o'zgartirish (patch)
-2. Kompaniya, klient, user'ni o'chirish (delete)
-3. Kompaniya, klient, user'ni yaratish (create)
-4. Kompaniya tanlanganda shu kompaniyaga tegishli klientlarni olish
+1. Kompaniya, klient, user'ni yaratish (create) (2 soat)
+2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
+3. Kompaniya, klient, user'ni o'chirish (delete) (2 soat)
+4. Kompaniya tanlanganda shu kompaniyaga tegishli klientlarni olish (1 soat)
+5. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
 ...
 10. test page'ni olib tashlash va ortiqcha fayllarni o'chirish
 
@@ -9,10 +10,11 @@ Frontend:
 
 -- bajarilganlar --
 
-7. Kompaniya, klient, user'larni olish (get)
-6. logout funksiyasi va navigation guard ni qo'shish
-5. Kompaniyalar ro'yhatini olish (getCompanies)
-4. Avtorizatsiyadan o'tishni sozlash
-3. Namuna kompaniyalarni yozib chiqish.
+8. Qaysi user bilan kirilsa, o'sha user ma'lumotlarini sidebar'ga qo'yish (2 soat)
+7. Klient, user'larni olish (get) (2 soat)
+6. logout funksiyasi va navigation guard ni qo'shish (2 soat)
+5. Kompaniyalar ro'yhatini olish (getCompanies) (2 soat)
+4. Avtorizatsiyadan o'tishni sozlash (2 soat)
+3. Namuna kompaniyalarni yozib chiqish. (3 soat)
 2. Sidebar'da yopiq turganda boshqa listga o'tsa, ochilib ketyapti. Shuni sozlash kerak.
 1. Sozlamalarga yangi sahifa yaratish va unga chiqish tugmasini qo'shish.

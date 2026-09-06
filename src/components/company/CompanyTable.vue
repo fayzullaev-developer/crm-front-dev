@@ -26,6 +26,7 @@ const companies = computed(() => useFetchCompanies().state.companies)
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
+                        v-if="company.image.contentUrl"
                         class="rounded-circle me-3 img"
                         v-bind:src="'http://localhost:8505' + company.image.contentUrl"
                         alt=""

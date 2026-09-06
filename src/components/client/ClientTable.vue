@@ -26,6 +26,7 @@ const clients = computed(() => useFetchClients().state.clients)
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
+                        v-if="client.image.contentUrl"
                         class="rounded-circle me-3"
                         v-bind:src="'http://localhost:8505' + client.image.contentUrl"
                         alt=""

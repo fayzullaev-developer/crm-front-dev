@@ -1,6 +1,6 @@
 <script setup>
 import {useRoute} from "vue-router";
-import {onMounted, ref} from "vue";
+import {computed, onMounted, reactive, ref, watch} from "vue";
 
 import usersIcon from '@/assets/images/users.svg'
 import usersActiveIcon from '@/assets/images/users-active.svg'
@@ -12,6 +12,33 @@ import settingsIcon from '@/assets/images/settings.svg'
 import settingsActiveIcon from '@/assets/images/settings-active.svg'
 import toggleIcon from '@/assets/images/toggle.svg'
 import toggleActiveIcon from '@/assets/images/toggle-active.svg'
+import {jwtDecode} from "jwt-decode";
+import {useFetchUsers} from "@/stores/user/getUsers.js";
+
+const currentUser = reactive({
+    email: '',
+    givenName: '',
+    image: ''
+})
+
+const token = localStorage.getItem('token')
+const decoded = jwtDecode(token)
+const authUserEmail = decoded.username
+
+useFetchUsers().usersGet()
+const allUsers = computed(() => useFetchUsers().state.users)
+
+watch(allUsers, (newUsers) => {
+    if (newUsers) {
+        newUsers.forEach(user => {
+            if (user.email === authUserEmail) {
+                currentUser.email = user.email
+                currentUser.givenName = user.givenName
+                currentUser.image = user.image?.contentUrl || []
+            }
+        })
+    }
+}, {immediate: true})
 
 const route = useRoute()
 const isCollapsed = ref(localStorage.getItem('sidebarCollapsed') === 'true')
@@ -57,14 +84,21 @@ function toggleSidebar() {
             <!-- Profile -->
             <div class="d-flex profile pt-2 px-4">
                 <div>
-                    <img class="rounded-circle me-3" src="@/assets/images/ameliya.png" alt="" width="46" height="46">
+                    <img
+                        v-if="currentUser.image"
+                        class="rounded-circle me-3"
+                        v-bind:src="'http://localhost:8505' + currentUser.image"
+                        alt=""
+                        width="46"
+                        height="46"
+                    >
                 </div>
                 <div class="d-flex flex-wrap profile-info">
                     <div class="w-100">
-                        <span class="font-poppins fs-14">Ameliya</span>
+                        <span class="font-poppins fs-14">{{ currentUser.givenName }}</span>
                     </div>
                     <div class="w-100 d-flex align-top">
-                        <span class="font-poppins fw-medium fs-11 text-p-gray">ameliya.cer@gmail.com</span>
+                        <span class="font-poppins fw-medium fs-11 text-p-gray">{{ currentUser.email }}</span>
                     </div>
                 </div>
             </div>
