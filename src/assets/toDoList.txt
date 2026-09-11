@@ -1,8 +1,8 @@
 1. Kompaniya, klient, user'ni yaratish (create) (2 soat)
 2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
 3. Kompaniya, klient, user'ni o'chirish (delete) (2 soat)
-4. Kompaniya tanlanganda shu kompaniyaga tegishli klientlarni olish (1 soat)
-5. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
+4. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
+5.
 ...
 10. test page'ni olib tashlash va ortiqcha fayllarni o'chirish
 
@@ -10,6 +10,7 @@ Frontend:
 
 -- bajarilganlar --
 
+9. Kompaniya tanlanganda shu kompaniyaga tegishli klientlarni olish (2 soat)
 8. Qaysi user bilan kirilsa, o'sha user ma'lumotlarini sidebar'ga qo'yish (2 soat)
 7. Klient, user'larni olish (get) (2 soat)
 6. logout funksiyasi va navigation guard ni qo'shish (2 soat)

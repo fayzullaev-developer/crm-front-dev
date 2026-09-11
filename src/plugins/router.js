@@ -43,14 +43,6 @@ const routes = [
         beforeEnter: ifAuthorized
     },
     {
-        path: '/client-page/:id',
-        component: () => import('@/pages/ClientPage.vue'),
-        meta: {
-            layout: defineAsyncComponent(() => import('@/layouts/DefaultLayout.vue'))
-        },
-        beforeEnter: ifAuthorized
-    },
-    {
         path: '/settings',
         component: () => import('@/pages/SettinsPage.vue'),
         meta: {
