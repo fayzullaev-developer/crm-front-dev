@@ -20,14 +20,19 @@ defineEmits(['update:modelValue'])
 
 <template>
     <div class="mb-3">
-        <label v-bind:for="propsId" class="form-label font-poppins">{{ labelName }}</label>
+        <label
+            :for="propsId"
+            class="form-label font-poppins"
+        >
+            {{ labelName }}
+        </label>
         <input
             @input="$emit('update:modelValue', $event.target.value)"
-            v-bind:id="propsId"
-            v-bind:type="inputType"
+            :id="propsId"
+            :type="inputType"
             class="form-control"
             required
-            v-bind:placeholder="placeHolder">
+            :placeholder="placeHolder">
     </div>
 </template>
 

@@ -4,6 +4,7 @@ import {computed} from "vue";
 
 useFetchUsers().usersGet()
 const users = computed(() => useFetchUsers().state.users)
+const host = import.meta.env.VITE_API_DOMEN
 </script>
 
 <template>
@@ -22,13 +23,13 @@ const users = computed(() => useFetchUsers().state.users)
             <tbody>
             <tr
                 v-for="user in users"
-                v-bind:key="user.id"
+                :key="user.id"
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
                         v-if="user.image.contentUrl"
                         class="rounded-circle me-3"
-                        v-bind:src="'http://localhost:8505' + user.image.contentUrl"
+                        :src="host + user.image.contentUrl"
                         alt=""
                         width="24"
                         height="24"

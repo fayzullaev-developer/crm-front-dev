@@ -1,20 +1,52 @@
 <script setup>
-import {computed} from "vue";
+import {computed, ref, watch} from "vue";
+import {useRoute, useRouter} from "vue-router";
 import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 
-useFetchCompanies().companiesGet()
-const companies = computed(() => useFetchCompanies().state.companies)
+const companyStore = useFetchCompanies()
+companyStore.companiesGet()
+const companies = computed(() => companyStore.state.companies)
+
+const route = useRoute();
+const router = useRouter();
+const selectedCompanyId = ref('');
+
+watch(
+    () => route.query.companyId,
+    (newId) => {
+        if (newId === undefined) {
+            selectedCompanyId.value = '';
+        } else {
+            selectedCompanyId.value = newId;
+        }
+    },
+    { immediate: true }
+)
+
+const onCompanyChange = () => {
+    router.push({
+        path: '/client-page',
+        query: selectedCompanyId.value ? {companyId: selectedCompanyId.value} : {}
+    });
+}
 </script>
 
 <template>
     <!-- Company select -->
     <div class="mt-3 font-poppins fs-12 text-p-gray company">
         <label for="company">Kompaniya:&nbsp;</label>
-        <select name="company" id="company">
-            <option selected value="all">Hammasi</option>
+        <select
+            name="company"
+            id="company"
+            v-model="selectedCompanyId"
+            @change="onCompanyChange"
+        >
+            <option value="">Hammasi</option>
             <option
                 v-for="company in companies"
-                v-bind:key="company.id">
+                :key="company.id"
+                :value="company.id"
+            >
                 {{company.name}}
             </option>
         </select>

@@ -31,7 +31,7 @@ function openMenu() {
             </button>
         </nav>
         <FormButton
-            v-bind:text="buttonText"
+            :text="buttonText"
             class="ms-auto m-2 btn-add font-poppins fw-medium fs-13"
             data-bs-toggle="modal"
             data-bs-target="#modalAdd"

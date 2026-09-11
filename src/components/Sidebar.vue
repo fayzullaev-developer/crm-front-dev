@@ -27,6 +27,7 @@ const authUserEmail = decoded.username
 
 useFetchUsers().usersGet()
 const allUsers = computed(() => useFetchUsers().state.users)
+const host = import.meta.env.VITE_API_DOMEN
 
 watch(allUsers, (newUsers) => {
     if (newUsers) {
@@ -87,7 +88,7 @@ function toggleSidebar() {
                     <img
                         v-if="currentUser.image"
                         class="rounded-circle me-3"
-                        v-bind:src="'http://localhost:8505' + currentUser.image"
+                        :src="host + currentUser.image"
                         alt=""
                         width="46"
                         height="46"

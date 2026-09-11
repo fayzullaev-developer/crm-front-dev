@@ -40,7 +40,7 @@ function auth() {
 
                 <div class="text-end">
                     <FormButton @click="auth()"
-                                v-bind:loading="isLoading"
+                                :loading="isLoading"
                                 text="Kirish"
                                 class="col-12 col-md-6 col-lg-4" />
                 </div>

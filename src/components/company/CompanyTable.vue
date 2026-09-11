@@ -4,6 +4,7 @@ import {computed} from "vue";
 
 useFetchCompanies().companiesGet()
 const companies = computed(() => useFetchCompanies().state.companies)
+const host = import.meta.env.VITE_API_DOMEN
 </script>
 
 <template>
@@ -22,13 +23,13 @@ const companies = computed(() => useFetchCompanies().state.companies)
             <tbody>
             <tr
                 v-for="company in companies"
-                v-bind:key="company.id"
+                :key="company.id"
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
                         v-if="company.image.contentUrl"
                         class="rounded-circle me-3 img"
-                        v-bind:src="'http://localhost:8505' + company.image.contentUrl"
+                        :src="host + company.image.contentUrl"
                         alt=""
                         width="24"
                         height="24"

@@ -1,9 +1,25 @@
 <script setup>
+import {computed, watch} from "vue";
+import {useRoute} from "vue-router";
 import {useFetchClients} from "@/stores/client/getClients.js";
-import {computed} from "vue";
 
-useFetchClients().clientsGet()
-const clients = computed(() => useFetchClients().state.clients)
+const clientStore = useFetchClients()
+const clients = computed(() => clientStore.state.clients)
+const host = import.meta.env.VITE_API_DOMEN
+const route = useRoute();
+
+watch(
+    () => route.query.companyId,
+    (value) => {
+        if (value === undefined) {
+            clientStore.clientsGet()
+        } else {
+            clientStore.clientsGet('/by-company?companyId=' + route.query.companyId)
+        }
+    },
+    { immediate: true }
+)
+
 </script>
 
 <template>
@@ -22,13 +38,13 @@ const clients = computed(() => useFetchClients().state.clients)
             <tbody>
             <tr
                 v-for="client in clients"
-                v-bind:key="client.id"
+                :key="client.id"
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
                         v-if="client.image.contentUrl"
                         class="rounded-circle me-3"
-                        v-bind:src="'http://localhost:8505' + client.image.contentUrl"
+                        :src="host + client.image.contentUrl"
                         alt=""
                         width="24"
                         height="24"

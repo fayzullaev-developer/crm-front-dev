@@ -8,9 +8,9 @@ export const useFetchClients = defineStore(
             clients: [],
             count: 0,
         })
-        function clientsGet() {
+        function clientsGet(url = '') {
             return new Promise((resolve, reject) => {
-                client.get('clients')
+                client.get('clients' + url)
                     .then((res) => {
                         console.log('Mijozlar olindi');
                         state.clients = res.data.member;
