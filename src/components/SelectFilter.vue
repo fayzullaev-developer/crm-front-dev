@@ -60,7 +60,7 @@ const onCompanyChange = () => {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url("@/assets/images/polygon.svg") no-repeat right 6px center / 10px;
+    background: url("@/assets/images/icons/polygon.svg") no-repeat right 6px center / 10px;
     padding-right: 22px;
 }
 </style>

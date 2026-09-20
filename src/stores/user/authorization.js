@@ -13,9 +13,9 @@ export const useAuthorization = defineStore(
                         localStorage.setItem("token", res.data.token);
                         resolve();
                     })
-                    .catch(() => {
+                    .catch((err) => {
                         console.log('token olishda xatolik');
-                        reject();
+                        reject(err);
                     })
             })
         }

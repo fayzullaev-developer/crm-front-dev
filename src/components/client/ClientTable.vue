@@ -57,10 +57,10 @@ watch(
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
-                            <img src="../../assets/images/edit.svg" alt="edit">
+                            <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
                         <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                            <img src="../../assets/images/delete.svg" alt="delete">
+                            <img src="../../assets/images/icons/delete.svg" alt="delete">
                         </button>
                     </div>
                 </td>

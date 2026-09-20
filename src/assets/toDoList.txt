@@ -1,9 +1,11 @@
-1. Kompaniya, klient, user'ni yaratish (create) (2 soat)
-2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
-3. Kompaniya, klient, user'ni o'chirish (delete) (2 soat)
-4. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
-5. Izlash parametrlarini (search) sozlash
-6. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
+1. Fayl biriktirilmasa, default rasmni qo'yish
+    Mijozni saqlashda xato bersa, fayl saqlanib qolyapti, shuni to'g'rilash
+2. Kompaniya, user'ni yaratish (create) (2 soat)
+3. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
+4. Kompaniya, klient, user'ni o'chirish (delete) (2 soat)
+5. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
+6. Izlash parametrlarini (search) sozlash
+7. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
 ...
 10. test page'ni olib tashlash va ortiqcha fayllarni o'chirish
 
@@ -11,7 +13,9 @@ Frontend:
 
 -- bajarilganlar --
 
-10. Klient'ni yaratish (2 soat)
+10. Mijozni yaratish (4+4 soat):
+    Mijozni yaratishda email yagona bo'lmasa, xatoni qizil toastda ko'rsatish,
+    Mijoz yaratilgandan keyin, formani tozalash
 9. Kompaniya tanlanganda shu kompaniyaga tegishli klientlarni olish (2 soat)
 8. Qaysi user bilan kirilsa, o'sha user ma'lumotlarini sidebar'ga qo'yish (2 soat)
 7. Klient, user'larni olish (get) (2 soat)

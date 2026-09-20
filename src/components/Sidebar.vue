@@ -2,16 +2,16 @@
 import {useRoute} from "vue-router";
 import {computed, onMounted, reactive, ref, watch} from "vue";
 
-import usersIcon from '@/assets/images/users.svg'
-import usersActiveIcon from '@/assets/images/users-active.svg'
-import companyIcon from '@/assets/images/company.svg'
-import companyActiveIcon from '@/assets/images/company-active.svg'
-import clientsIcon from '@/assets/images/clients.svg'
-import clientsActiveIcon from '@/assets/images/clients-active.svg'
-import settingsIcon from '@/assets/images/settings.svg'
-import settingsActiveIcon from '@/assets/images/settings-active.svg'
-import toggleIcon from '@/assets/images/toggle.svg'
-import toggleActiveIcon from '@/assets/images/toggle-active.svg'
+import usersIcon from '@/assets/images/icons/users.svg'
+import usersActiveIcon from '@/assets/images/icons/users-active.svg'
+import companyIcon from '@/assets/images/icons/company.svg'
+import companyActiveIcon from '@/assets/images/icons/company-active.svg'
+import clientsIcon from '@/assets/images/icons/clients.svg'
+import clientsActiveIcon from '@/assets/images/icons/clients-active.svg'
+import settingsIcon from '@/assets/images/icons/settings.svg'
+import settingsActiveIcon from '@/assets/images/icons/settings-active.svg'
+import toggleIcon from '@/assets/images/icons/toggle.svg'
+import toggleActiveIcon from '@/assets/images/icons/toggle-active.svg'
 import {jwtDecode} from "jwt-decode";
 import {useFetchUsers} from "@/stores/user/getUsers.js";
 

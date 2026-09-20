@@ -10,9 +10,9 @@ export const useCreateClient = defineStore(
                         console.log('klient yaratildi')
                         resolve(res);
                     })
-                    .catch(() => {
+                    .catch((err) => {
                         console.log('klient yaratishda xatolik')
-                        reject();
+                        reject(err);
                     })
             })
         }

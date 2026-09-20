@@ -38,7 +38,7 @@ function showToast() {
                 <!-- Profile -->
                 <div class="d-flex profile pt-2 px-4">
                     <div>
-                        <img class="rounded-circle me-3" src="@/assets/images/ameliya.png" alt="" width="46" height="46">
+                        <img class="rounded-circle me-3" src="../assets/images/test_images/ameliya.png" alt="" width="46" height="46">
                     </div>
                     <div class="d-flex flex-wrap profile-info">
                         <div class="w-100">
@@ -54,19 +54,19 @@ function showToast() {
                 <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" href="#">
-                            <img src="../assets/images/users-active.svg" alt="" class="me-2">
+                            <img src="../assets/images/icons/users-active.svg" alt="" class="me-2">
                             <span class="menu-text">Foydalanuvchi qo'shish</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                            <img src="@/assets/images/company.svg" alt="" class="me-2">
+                            <img src="../assets/images/icons/company.svg" alt="" class="me-2">
                             <span class="menu-text">Kompaniyalar</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                            <img src="@/assets/images/clients.svg" alt="" class="me-2">
+                            <img src="../assets/images/icons/clients.svg" alt="" class="me-2">
                             <span class="menu-text">Mijozlar</span>
                         </a>
                     </li>
@@ -77,7 +77,7 @@ function showToast() {
                 <!-- Settings -->
                 <div class="nav px-4">
                     <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                        <img src="@/assets/images/settings.svg" alt="" class="me-2">
+                        <img src="../assets/images/icons/settings.svg" alt="" class="me-2">
                         <span class="menu-text">Sozlamalar</span>
                     </a>
                 </div>
@@ -85,7 +85,7 @@ function showToast() {
                 <!-- Close menu -->
                 <div class="nav px-4 mt-auto mb-3">
                     <button class="nav-link font-poppins fw-medium fs-11 text-p-gray px-0" @click="toggleSidebar()">
-                        <img src="@/assets/images/toggle.svg" alt="" class="mx-1 me-2">
+                        <img src="../assets/images/icons/toggle.svg" alt="" class="mx-1 me-2">
                         <span class="menu-text">Menyuni yopish</span>
                     </button>
                 </div>
@@ -131,28 +131,28 @@ function showToast() {
 
             <div class="col-12 col-md">
                 <div class="d-flex search">
-                    <img src="@/assets/images/search.svg" alt="">
+                    <img src="../assets/images/icons/search.svg" alt="">
                     <input type="text" class="align-middle" placeholder="Foydalanuvchini qidirish" />
                 </div>
             </div>
 
             <div class="col-12 col-md">
                 <div class="d-flex search">
-                    <img src="@/assets/images/search.svg" alt="">
+                    <img src="../assets/images/icons/search.svg" alt="">
                     <input type="text" class="align-middle" placeholder="Emailni qidirish" />
                 </div>
             </div>
 
             <div class="col-12 col-md">
                 <div class="d-flex search">
-                    <img src="@/assets/images/search.svg" alt="">
+                    <img src="../assets/images/icons/search.svg" alt="">
                     <input type="text" class="align-middle" placeholder="Parolni qidirish" />
                 </div>
             </div>
 
             <div class="col-12 col-md">
                 <div class="d-flex search">
-                    <img src="@/assets/images/search.svg" alt="">
+                    <img src="../assets/images/icons/search.svg" alt="">
                     <input type="text" class="align-middle" placeholder="So'nggi faollikni qidirish" />
                 </div>
             </div>
@@ -174,7 +174,7 @@ function showToast() {
                 <tbody>
                 <tr>
                     <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
-                        <img class="rounded-circle me-3" src="@/assets/images/lindsey_stroud.png" alt="" width="24" height="24">
+                        <img class="rounded-circle me-3" src="../assets/images/test_images/lindsey_stroud.png" alt="" width="24" height="24">
                         <span class="fw-medium fs-15 text-p-muted text-break">Lindsey Stroud</span>
                     </td>
                     <td class="py-2 py-sm-3 text-break">lindsey.stroud@gmail.com</td>
@@ -183,17 +183,17 @@ function showToast() {
                     <td class="pe-3 pe-md-4 py-2 py-sm-3">
                         <div class="d-flex justify-content-evenly">
                             <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
-                                <img src="@/assets/images/edit.svg" alt="edit">
+                                <img src="../assets/images/icons/edit.svg" alt="edit">
                             </button>
                             <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                                <img src="@/assets/images/delete.svg" alt="delete">
+                                <img src="../assets/images/icons/delete.svg" alt="delete">
                             </button>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                        <img class="rounded-circle me-3" src="@/assets/images/nicci_troiani.png" alt="" width="24" height="24">
+                        <img class="rounded-circle me-3" src="../assets/images/test_images/nicci_troiani.png" alt="" width="24" height="24">
                         <span class="fw-medium fs-15 text-p-muted">Nicci Troiani</span>
                     </td>
                     <td class="py-2 py-sm-3 text-break">nicci.troiani@gmail.com</td>
@@ -201,14 +201,14 @@ function showToast() {
                     <td class="py-2 py-sm-3">14 minut oldin</td>
                     <td class="pe-3 pe-md-4 py-2 py-sm-3">
                         <div class="d-flex justify-content-evenly">
-                            <img src="@/assets/images/edit.svg" alt="edit">
-                            <img src="@/assets/images/delete.svg" alt="delete">
+                            <img src="../assets/images/icons/edit.svg" alt="edit">
+                            <img src="../assets/images/icons/delete.svg" alt="delete">
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td class="ps-3 ps-md-4 py-2 py-sm-3">
-                        <img class="rounded-circle me-3" src="@/assets/images/george_fields.png" alt="" width="24" height="24">
+                        <img class="rounded-circle me-3" src="../assets/images/test_images/george_fields.png" alt="" width="24" height="24">
                         <span class="fw-medium fs-15 text-p-muted">George Fields</span>
                     </td>
                     <td class="py-2 py-sm-3 text-break">george.fields@gmail.com</td>
@@ -216,8 +216,8 @@ function showToast() {
                     <td class="py-2 py-sm-3">6 minut oldin</td>
                     <td class="pe-3 pe-md-4 py-2 py-sm-3">
                         <div class="d-flex justify-content-evenly">
-                            <img src="@/assets/images/edit.svg" alt="edit">
-                            <img src="@/assets/images/delete.svg" alt="delete">
+                            <img src="../assets/images/icons/edit.svg" alt="edit">
+                            <img src="../assets/images/icons/delete.svg" alt="delete">
                         </div>
                     </td>
                 </tr>
@@ -292,7 +292,7 @@ function showToast() {
         <div class="toast-container position-fixed start-50 toast-position translate-middle-x">
             <div id="liveToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-body">
-                    <img src="@/assets/images/check.svg" class="rounded me-2" alt="">
+                    <img src="../assets/images/icons/check.svg" class="rounded me-2" alt="">
                     Ma'lumotlar muvaffaqiyatli qo'shildi
                 </div>
             </div>
@@ -477,7 +477,7 @@ input, select {
     border: none;
     color: #109cf1;
     appearance: none;
-    background: url("@/assets/images/polygon.svg") 100% / 10% no-repeat;
+    background: url("@/assets/images/icons/polygon.svg") 100% / 10% no-repeat;
 }
 /* Select company - end */
 

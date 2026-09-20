@@ -17,9 +17,9 @@ export const useFetchClients = defineStore(
                         state.count = res.data.totalItems;
                         resolve();
                     })
-                    .catch(() => {
+                    .catch((err) => {
                         console.log('Mijozlarni olishda xatolik');
-                        reject();
+                        reject(err);
                     })
             })
         }

@@ -13,9 +13,9 @@ export const useAddFile = defineStore(
                         console.log('fayl yuklandi')
                         resolve(res);
                     })
-                    .catch(() => {
+                    .catch((err) => {
                         console.log('fayl yuklashda xatolik')
-                        reject();
+                        reject(err);
                     })
             })
         }

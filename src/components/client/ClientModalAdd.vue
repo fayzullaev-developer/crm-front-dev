@@ -1,7 +1,7 @@
 <script setup>
 import {reactive, ref} from "vue";
 import FormButton from "@/components/tags/FormButton.vue";
-import {useToastStore} from "@/stores/toast.js";
+import {useToastStore} from "@/stores/toast/showToast.js";
 import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 import {useAddFile} from "@/stores/mediaObject/addFile.js";
 import {useCreateClient} from "@/stores/client/createClient.js";
@@ -30,57 +30,46 @@ const create = (event) => {
         return;
     }
 
-    formSubmitted.value = false;
+    isLoading.value = true
 
     useAddFile().addFile(file.value)
         .then((res) => {
+            // const uploadedFile = res.data[''];
             client.image = res.data['@id'];
 
             useCreateClient().createClient(client)
                 .then(() => {
-                    toastStore.show("Mijoz muvaffaqiyatli qo'shildi!")
+                    toastStore.showToast("Mijoz muvaffaqiyatli qo'shildi!", 'success')
 
                     if (closeModalBtn.value) {
                         closeModalBtn.value.click();
                     }
+
+                    // formani tozalash
+                    event.target.reset();
+
+                    client.givenName = ''
+                    client.email = ''
+                    client.company = ''
+                    client.image = ''
+                    file.value = null
+                    formSubmitted.value = false;
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const errorMsg = err.response?.data?.detail;
+                    toastStore.showToast("Xatolik: " + errorMsg, 'fail')
+
+                    if (closeModalBtn.value) {
+                        closeModalBtn.value.click();
+                    }
+
+                    console.log(errorMsg)
+                })
+                .finally(() => {
+                    isLoading.value = false
                 })
         })
 }
-
-// const handleAdd = (event) => {
-//
-//     const form = event.target;
-//     if (!form.checkValidity()) {
-//         formSubmitted.value = true;
-//         return;
-//     }
-//
-//     formSubmitted.value = false;
-//
-//     try {
-//         isLoading.value = true;
-//         // API request...
-//
-//         toastStore.show("Mijoz muvaffaqiyatli qo'shildi!")
-//
-//         client.name = '';
-//         client.email = '';
-//         client.company = '';
-//         client.image = '';
-//
-//         if (closeModalBtn.value) {
-//             closeModalBtn.value.click();
-//         }
-//
-//     } catch (error) {
-//         console.log(error)
-//     } finally {
-//         isLoading.value = false;
-//     }
-// }
 
 </script>
 
@@ -153,7 +142,7 @@ const create = (event) => {
                                 </option>
                             </select>
                             <div class="invalid-feedback">
-                                Iltimos, ishlash joyini kiriting.
+                                Iltimos, ishlash joyini tanlang.
                             </div>
                         </div>
                         <div class="mb-3">

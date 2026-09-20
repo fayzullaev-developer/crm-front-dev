@@ -17,9 +17,9 @@ export const useFetchCompanies = defineStore(
                         state.count = res.data.totalItems;
                         resolve();
                     })
-                    .catch(() => {
+                    .catch((err) => {
                         console.log('kompaniyalarni olishda xatolik')
-                        reject();
+                        reject(err);
                     })
             })
         }
