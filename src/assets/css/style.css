@@ -94,3 +94,14 @@ input, select {
 }
 
 /* Button - end */
+
+/* Avatar image - start */
+.avatar {
+    object-fit: contain;
+    overflow: visible;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #f9fafb;
+    border: 1px solid #109cf1;
+}
+/* Avatar image - end */

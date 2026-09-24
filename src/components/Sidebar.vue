@@ -2,12 +2,12 @@
 import {useRoute} from "vue-router";
 import {computed, onMounted, reactive, ref, watch} from "vue";
 
-import usersIcon from '@/assets/images/icons/users.svg'
-import usersActiveIcon from '@/assets/images/icons/users-active.svg'
+import userIcon from '@/assets/images/icons/user.svg'
+import userActiveIcon from '@/assets/images/icons/user-active.svg'
 import companyIcon from '@/assets/images/icons/company.svg'
 import companyActiveIcon from '@/assets/images/icons/company-active.svg'
-import clientsIcon from '@/assets/images/icons/clients.svg'
-import clientsActiveIcon from '@/assets/images/icons/clients-active.svg'
+import clientIcon from '@/assets/images/icons/client.svg'
+import clientActiveIcon from '@/assets/images/icons/client-active.svg'
 import settingsIcon from '@/assets/images/icons/settings.svg'
 import settingsActiveIcon from '@/assets/images/icons/settings-active.svg'
 import toggleIcon from '@/assets/images/icons/toggle.svg'
@@ -109,7 +109,7 @@ function toggleSidebar() {
                 <li class="nav-item">
                     <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" to="/">
                         <img
-                            :src="route.path === '/' ? usersActiveIcon : usersIcon"
+                            :src="route.path === '/' ? userActiveIcon : userIcon"
                             alt=""
                             class="me-2"
                         >
@@ -129,7 +129,7 @@ function toggleSidebar() {
                 <li class="nav-item">
                     <router-link class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" to="/client-page">
                         <img
-                            :src="route.path === '/client-page' ? clientsActiveIcon : clientsIcon"
+                            :src="route.path === '/client-page' ? clientActiveIcon : clientIcon"
                             alt=""
                             class="me-2"
                         >

@@ -54,7 +54,7 @@ function showToast() {
                 <ul class="nav flex-column px-4 pt-4 pb-2 mt-2">
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0 active" href="#">
-                            <img src="../assets/images/icons/users-active.svg" alt="" class="me-2">
+                            <img src="../assets/images/icons/user-active.svg" alt="" class="me-2">
                             <span class="menu-text">Foydalanuvchi qo'shish</span>
                         </a>
                     </li>
@@ -66,7 +66,7 @@ function showToast() {
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-poppins fw-semibold fs-13 text-p-dark px-0" href="#">
-                            <img src="../assets/images/icons/clients.svg" alt="" class="me-2">
+                            <img src="../assets/images/icons/client.svg" alt="" class="me-2">
                             <span class="menu-text">Mijozlar</span>
                         </a>
                     </li>

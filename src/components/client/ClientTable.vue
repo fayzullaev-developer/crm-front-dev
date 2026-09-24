@@ -2,6 +2,7 @@
 import {computed, watch} from "vue";
 import {useRoute} from "vue-router";
 import {useFetchClients} from "@/stores/client/getClients.js";
+import defaultClientAvatar from "@/assets/images/icons/client-active.svg"
 
 const clientStore = useFetchClients()
 const clients = computed(() => clientStore.state.clients)
@@ -14,7 +15,7 @@ watch(
         if (value === undefined) {
             clientStore.clientsGet()
         } else {
-            clientStore.clientsGet('/by-company?companyId=' + route.query.companyId)
+            clientStore.clientsGet('/by-company?companyId=' + value)
         }
     },
     { immediate: true }
@@ -42,17 +43,25 @@ watch(
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
-                        v-if="client.image.contentUrl"
+                        v-if="client.image?.contentUrl"
                         class="rounded-circle me-3"
                         :src="host + client.image.contentUrl"
-                        alt=""
+                        alt="Mijoz rasmi"
+                        width="24"
+                        height="24"
+                    >
+                    <img
+                        v-else
+                        class="me-3 avatar"
+                        :src="defaultClientAvatar"
+                        alt="Standart avatar"
                         width="24"
                         height="24"
                     >
                     <span class="fw-medium fs-15 text-p-muted text-break">{{ client.givenName }}</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">{{ client.email }}</td>
-                <td class="py-2 py-sm-3 text-break">{{ client.company.name}}</td>
+                <td class="py-2 py-sm-3 text-break">{{ client.company?.name}}</td>
                 <td class="py-2 py-sm-3 text-break">{{ client.createdAt }}</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">

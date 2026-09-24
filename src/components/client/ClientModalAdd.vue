@@ -15,7 +15,7 @@ const client = reactive({
     givenName: '',
     email: '',
     company: '',
-    image: '',
+    image: null,
 })
 
 let file = ref();
@@ -23,7 +23,41 @@ function selectImage(event) {
     file.value = event.target.files[0];
 }
 
-const create = (event) => {
+function createClient(form) {
+    useCreateClient().createClient(client)
+        .then(() => {
+            toastStore.showToast("Mijoz muvaffaqiyatli qo'shildi!", 'success')
+
+            if (closeModalBtn.value) {
+                closeModalBtn.value.click();
+            }
+
+            // formani tozalash
+            form.reset();
+
+            client.givenName = ''
+            client.email = ''
+            client.company = ''
+            client.image = null
+            file.value = null
+            formSubmitted.value = false;
+        })
+        .catch((err) => {
+            const errorMsg = err.response?.data?.detail;
+            toastStore.showToast("Xatolik: " + errorMsg, 'fail')
+
+            if (closeModalBtn.value) {
+                closeModalBtn.value.click();
+            }
+
+            console.log(errorMsg)
+        })
+        .finally(() => {
+            isLoading.value = false
+        })
+}
+
+function create(event) {
     const form = event.target;
     if (!form.checkValidity()) {
         formSubmitted.value = true;
@@ -32,43 +66,21 @@ const create = (event) => {
 
     isLoading.value = true
 
-    useAddFile().addFile(file.value)
-        .then((res) => {
-            // const uploadedFile = res.data[''];
-            client.image = res.data['@id'];
-
-            useCreateClient().createClient(client)
-                .then(() => {
-                    toastStore.showToast("Mijoz muvaffaqiyatli qo'shildi!", 'success')
-
-                    if (closeModalBtn.value) {
-                        closeModalBtn.value.click();
-                    }
-
-                    // formani tozalash
-                    event.target.reset();
-
-                    client.givenName = ''
-                    client.email = ''
-                    client.company = ''
-                    client.image = ''
-                    file.value = null
-                    formSubmitted.value = false;
-                })
-                .catch((err) => {
-                    const errorMsg = err.response?.data?.detail;
-                    toastStore.showToast("Xatolik: " + errorMsg, 'fail')
-
-                    if (closeModalBtn.value) {
-                        closeModalBtn.value.click();
-                    }
-
-                    console.log(errorMsg)
-                })
-                .finally(() => {
-                    isLoading.value = false
-                })
-        })
+    if (file.value) {
+        useAddFile().addFile(file.value)
+            .then((res) => {
+                client.image = res.data['@id'];
+                createClient(form)
+            })
+            .catch((err) => {
+                const errorMsg = err.response?.data?.detail
+                toastStore.showToast("Rasm yuklanmadi: " + errorMsg, 'fail')
+                isLoading.value = false;
+            })
+    } else {
+        client.image = null
+        createClient(form)
+    }
 }
 
 </script>
