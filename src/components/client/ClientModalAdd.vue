@@ -1,12 +1,17 @@
 <script setup>
 import {reactive, ref} from "vue";
+import {useRoute} from "vue-router";
 import FormButton from "@/components/tags/FormButton.vue";
 import {useToastStore} from "@/stores/toast/showToast.js";
 import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 import {useAddFile} from "@/stores/mediaObject/addFile.js";
 import {useCreateClient} from "@/stores/client/createClient.js";
+import {useFetchClients} from "@/stores/client/getClients.js";
 
 const toastStore = useToastStore()
+const clientStore = useFetchClients()
+const route = useRoute()
+
 const isLoading = ref(false);
 const formSubmitted = ref(false);
 const closeModalBtn = ref(null);
@@ -28,13 +33,18 @@ function createClient(form) {
         .then(() => {
             toastStore.showToast("Mijoz muvaffaqiyatli qo'shildi!", 'success')
 
+            const companyId = route.query.companyId
+            if (companyId === undefined) {
+                clientStore.clientsGet()
+            } else {
+                clientStore.clientsGet('/by-company?companyId=' + companyId)
+            }
+
             if (closeModalBtn.value) {
                 closeModalBtn.value.click();
             }
 
-            // formani tozalash
             form.reset();
-
             client.givenName = ''
             client.email = ''
             client.company = ''
@@ -44,7 +54,7 @@ function createClient(form) {
         })
         .catch((err) => {
             const errorMsg = err.response?.data?.detail;
-            toastStore.showToast("Xatolik: " + errorMsg, 'fail')
+            toastStore.showToast("Xatolik:\n" + errorMsg, 'fail')
 
             if (closeModalBtn.value) {
                 closeModalBtn.value.click();

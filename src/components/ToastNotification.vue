@@ -51,6 +51,7 @@ watch(
     min-width: 312px;
     --bs-toast-max-width: 400px !important;
     box-shadow: none;
+    white-space: pre-wrap;
 }
 
 .toast-position {

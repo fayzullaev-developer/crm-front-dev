@@ -29,7 +29,9 @@ watch(
         <table class="table mb-0 align-middle font-poppins fs-13">
             <thead class="p-3">
             <tr>
-                <th scope="col" class="ps-3 ps-md-4 py-2 py-sm-3 align-middle text-break">Mi<wbr>joz<wbr>lar<wbr> (Ism)</th>
+                <th scope="col" class="ps-3 ps-md-4 py-2 py-sm-3 align-middle text-break">
+                    Mi<wbr>joz<wbr>lar<wbr> (Ism)
+                </th>
                 <th scope="col" class="py-2 py-sm-3 align-middle text-break">Email</th>
                 <th scope="col" class="py-2 py-sm-3 align-middle text-break">Ish<wbr>lash jo<wbr>yi</th>
                 <th scope="col" class="py-2 py-sm-3 align-middle text-break">So'ng<wbr>gi faol<wbr>lik</th>
@@ -61,7 +63,7 @@ watch(
                     <span class="fw-medium fs-15 text-p-muted text-break">{{ client.givenName }}</span>
                 </td>
                 <td class="py-2 py-sm-3 text-break">{{ client.email }}</td>
-                <td class="py-2 py-sm-3 text-break">{{ client.company?.name}}</td>
+                <td class="py-2 py-sm-3 text-break">{{ client.company?.name || '-'}}</td>
                 <td class="py-2 py-sm-3 text-break">{{ client.createdAt }}</td>
                 <td class="pe-3 pe-md-4 py-2 py-sm-3">
                     <div class="d-flex justify-content-evenly">
