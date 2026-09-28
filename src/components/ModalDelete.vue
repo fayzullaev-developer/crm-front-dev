@@ -1,21 +1,9 @@
 <script setup>
-import {useToastStore} from "@/stores/toast/showToast.js";
 
-const props = defineProps({
-    toastText: {
-        type: String,
-        required: true
-    }
-})
+const emit = defineEmits(['confirm'])
 
-const toastStore = useToastStore()
-
-const handleDelete = () => {
-    // api request...
-
-    toastStore.show(props.toastText)
-
-    // table reload...
+function confirmDelete() {
+    emit('confirm')
 }
 </script>
 
@@ -35,7 +23,7 @@ const handleDelete = () => {
                     </span>
                     <div class="d-flex buttons ms-2 ms-sm-3 justify-content-end">
                         <button type="button"
-                                @click="handleDelete"
+                                @click="confirmDelete"
                                 data-bs-dismiss="modal"
                                 id="btn-yes"
                                 class="btn bg-p-red text-white rounded-min me-2 me-sm-3

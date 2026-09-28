@@ -3,8 +3,12 @@ import {computed, watch} from "vue";
 import {useRoute} from "vue-router";
 import {useFetchClients} from "@/stores/client/getClients.js";
 import defaultClientAvatar from "@/assets/images/icons/client-active.svg"
+import deleteIcon from "@/assets/images/icons/delete.svg"
+
+const emit = defineEmits(['open'])
 
 const clientStore = useFetchClients()
+
 const clients = computed(() => clientStore.state.clients)
 const host = import.meta.env.VITE_API_DOMEN
 const route = useRoute();
@@ -20,6 +24,17 @@ watch(
     },
     { immediate: true }
 )
+
+function remove(id) {
+    emit('open', id)
+}
+
+// function remove(id) {
+//     clientDeleteStore.clientDelete(id)
+//         .then(() => {
+//             clientStore.clientsGet()
+//         })
+// }
 
 </script>
 
@@ -70,8 +85,13 @@ watch(
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
                             <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
-                        <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                            <img src="../../assets/images/icons/delete.svg" alt="delete">
+                        <button
+                            type="button"
+                            @click="remove(client.id)"
+                            class="img-btn"
+                            data-bs-target="#modalDelete"
+                            data-bs-toggle="modal">
+                            <img :src="deleteIcon" alt="delete">
                         </button>
                     </div>
                 </td>
