@@ -1,8 +1,6 @@
 <script setup>
 import Sidebar from "@/components/Sidebar.vue";
 import ControlPanel from "@/components/ControlPanel.vue";
-import ClientModalAdd from "@/components/client/ClientModalAdd.vue";
-import ClientModalEdit from "@/components/client/ClientModalEdit.vue";
 import ModalDelete from "@/components/ModalDelete.vue";
 import ToastNotification from "@/components/ToastNotification.vue";
 import CompanySearchBar from "@/components/company/CompanySearchBar.vue";
@@ -25,7 +23,7 @@ import CompanyModalEdit from "@/components/company/CompanyModalEdit.vue";
 
     <CompanyModalAdd />
     <CompanyModalEdit />
-    <ModalDelete toast-text="Kompaniya muvaffaqiyatli o'chirildi!"/>
+    <ModalDelete />
     <ToastNotification />
 
 </template>

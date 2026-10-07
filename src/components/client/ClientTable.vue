@@ -29,13 +29,6 @@ function remove(id) {
     emit('open', id)
 }
 
-// function remove(id) {
-//     clientDeleteStore.clientDelete(id)
-//         .then(() => {
-//             clientStore.clientsGet()
-//         })
-// }
-
 </script>
 
 <template>
@@ -85,12 +78,9 @@ function remove(id) {
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
                             <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
-                        <button
-                            type="button"
-                            @click="remove(client.id)"
-                            class="img-btn"
-                            data-bs-target="#modalDelete"
-                            data-bs-toggle="modal">
+                        <button type="button"
+                                @click="remove(client.id)"
+                                class="img-btn">
                             <img :src="deleteIcon" alt="delete">
                         </button>
                     </div>

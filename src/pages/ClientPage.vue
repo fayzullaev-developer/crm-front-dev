@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import {useRoute} from "vue-router";
+import {Modal} from "bootstrap";
 import Sidebar from "@/components/Sidebar.vue";
 import ControlPanel from "@/components/ControlPanel.vue";
 import ClientModalAdd from "@/components/client/ClientModalAdd.vue";
@@ -22,6 +23,12 @@ const selected = ref(null)
 
 function onOpen(id) {
     selected.value = id
+
+    const modalDel = document.getElementById('modalDelete')
+    if (modalDel) {
+        const modalInstance = Modal.getOrCreateInstance(modalDel)
+        modalInstance.show()
+    }
 }
 
 function onConfirm() {
