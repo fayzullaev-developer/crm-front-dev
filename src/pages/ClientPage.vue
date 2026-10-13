@@ -21,7 +21,7 @@ const route = useRoute()
 
 const selected = ref(null)
 
-function onOpen(id) {
+function remove(id) {
     selected.value = id
 
     const modalDel = document.getElementById('modalDelete')
@@ -65,7 +65,7 @@ function onConfirm() {
         <ControlPanel button-text="Mijoz qo'shish" />
         <SelectFilter />
         <ClientSearchBar />
-        <ClientTable @open="onOpen" />
+        <ClientTable @open="remove" />
     </div>
 
     <ModalDelete @confirm="onConfirm" />

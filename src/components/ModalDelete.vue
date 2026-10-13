@@ -1,10 +1,5 @@
 <script setup>
 
-const emit = defineEmits(['confirm'])
-
-function confirmDelete() {
-    emit('confirm')
-}
 </script>
 
 <template>
@@ -23,7 +18,7 @@ function confirmDelete() {
                     </span>
                     <div class="d-flex buttons ms-2 ms-sm-3 justify-content-end">
                         <button type="button"
-                                @click="confirmDelete"
+                                @click="$emit('confirm')"
                                 data-bs-dismiss="modal"
                                 id="btn-yes"
                                 class="btn bg-p-red text-white rounded-min me-2 me-sm-3

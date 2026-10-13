@@ -5,8 +5,6 @@ import {useFetchClients} from "@/stores/client/getClients.js";
 import defaultClientAvatar from "@/assets/images/icons/client-active.svg"
 import deleteIcon from "@/assets/images/icons/delete.svg"
 
-const emit = defineEmits(['open'])
-
 const clientStore = useFetchClients()
 
 const clients = computed(() => clientStore.state.clients)
@@ -24,10 +22,6 @@ watch(
     },
     { immediate: true }
 )
-
-function remove(id) {
-    emit('open', id)
-}
 
 </script>
 
@@ -79,7 +73,7 @@ function remove(id) {
                             <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
                         <button type="button"
-                                @click="remove(client.id)"
+                                @click="$emit('open', client.id)"
                                 class="img-btn">
                             <img :src="deleteIcon" alt="delete">
                         </button>

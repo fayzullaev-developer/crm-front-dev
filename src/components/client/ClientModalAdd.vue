@@ -7,9 +7,11 @@ import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 import {useAddFile} from "@/stores/mediaObject/addFile.js";
 import {useCreateClient} from "@/stores/client/createClient.js";
 import {useFetchClients} from "@/stores/client/getClients.js";
+import {useDeleteFile} from "@/stores/mediaObject/deleteFile.js";
 
 const toastStore = useToastStore()
 const clientStore = useFetchClients()
+const deleteFileStore = useDeleteFile()
 const route = useRoute()
 
 const isLoading = ref(false);
@@ -55,6 +57,16 @@ function createClient(form) {
         .catch((err) => {
             const errorMsg = err.response?.data?.detail;
             toastStore.showToast("Xatolik:\n" + errorMsg, 'fail')
+
+            if (client.image) {
+                const fileId = client.image.split('/').pop();
+
+                deleteFileStore.fileDelete(fileId)
+                    .catch((err) => {
+                        const errorMsg = err.response?.data?.detail;
+                        console.log("Faylni o'chirishda xatolik: " + errorMsg)
+                    })
+            }
 
             if (closeModalBtn.value) {
                 closeModalBtn.value.click();
