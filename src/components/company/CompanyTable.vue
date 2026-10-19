@@ -1,9 +1,13 @@
 <script setup>
 import {useFetchCompanies} from "@/stores/company/getCompanies.js";
 import {computed} from "vue";
+import defaultCompanyAvatar from "@/assets/images/icons/company-active.svg"
+import deleteIcon from "@/assets/images/icons/delete.svg"
 
-useFetchCompanies().companiesGet()
-const companies = computed(() => useFetchCompanies().state.companies)
+const companyStore = useFetchCompanies()
+
+companyStore.companiesGet()
+const companies = computed(() => companyStore.state.companies)
 const host = import.meta.env.VITE_API_DOMEN
 </script>
 
@@ -27,10 +31,18 @@ const host = import.meta.env.VITE_API_DOMEN
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
-                        v-if="company.image.contentUrl"
+                        v-if="company.image?.contentUrl"
                         class="rounded-circle me-3 img"
                         :src="host + company.image.contentUrl"
                         alt=""
+                        width="24"
+                        height="24"
+                    >
+                    <img
+                        v-else
+                        class="me-3 avatar"
+                        :src="defaultCompanyAvatar"
+                        alt="Standart avatar"
                         width="24"
                         height="24"
                     >
@@ -44,8 +56,10 @@ const host = import.meta.env.VITE_API_DOMEN
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
                             <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
-                        <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                            <img src="../../assets/images/icons/delete.svg" alt="delete">
+                        <button type="button"
+                                @click="$emit('delete', company.id)"
+                                class="img-btn">
+                            <img :src="deleteIcon" alt="delete">
                         </button>
                     </div>
                 </td>

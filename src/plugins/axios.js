@@ -2,7 +2,7 @@ import axios from "axios";
 
 axios.interceptors.request.use(config => {
     if (localStorage.getItem("token") !== null) {
-        config.headers.Authorization = 'Bearer ' +  localStorage.getItem('token');
+        config.headers.Authorization = 'Bearer ' + localStorage.getItem('token');
     } else {
         config.headers.Authorization = '';
     }
@@ -16,6 +16,18 @@ axios.interceptors.request.use(config => {
     }
 
     return config;
-})
+}, error => {
+    return Promise.reject(error)
+});
+
+axios.interceptors.response.use(
+    response => response,
+    error => {
+        if (error.response && error.response.status === 401) {
+            localStorage.removeItem("token")
+        }
+        return Promise.reject(error);
+    }
+);
 
 export {axios as client}
