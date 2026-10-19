@@ -1,18 +1,20 @@
-1. User'ni o'chirish (delete) (2 soat)
-3. Kompaniya, user'ni yaratish (create) (2 soat)
-4. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
-5. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
-6. Izlash parametrlarini (search) sozlash
-7. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
+1. Kompaniya, user'ni yaratish (create) (2 soat)
+2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
+3. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
+4. Izlash parametrlarini (search) sozlash
+5. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
+6. Mobile'da layoutni ko'rib chiqish kerak
 ...
 10. test page'ni olib tashlash va ortiqcha fayllarni o'chirish
 
-1. Mijozni o'chirganda rasmi ham qo'shilib o'chirilishi kerak (Bu bekendda qilingani ma'qulroq)
+1. Mijozni, kompaniyani, foydalanuvchini o'chirganda rasmi ham qo'shilib
+   o'chirilishi kerak (Bu bekendda qilingani ma'qulroq)
 
 Frontend:
 
 -- bajarilganlar --
 
+13. User'ni o'chirish (delete) (2 soat)
 12. Kompaniyani o'chirish (delete) (2 soat)
 11. Mijozni o'chirish (2+2 soat)
 10. Mijozni yaratish (4+4+2+2 soat):

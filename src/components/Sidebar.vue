@@ -1,7 +1,8 @@
 <script setup>
 import {useRoute} from "vue-router";
+import {jwtDecode} from "jwt-decode";
+import {useFetchUsers} from "@/stores/user/getUsers.js";
 import {computed, onMounted, reactive, ref, watch} from "vue";
-
 import userIcon from '@/assets/images/icons/user.svg'
 import userActiveIcon from '@/assets/images/icons/user-active.svg'
 import companyIcon from '@/assets/images/icons/company.svg'
@@ -12,8 +13,6 @@ import settingsIcon from '@/assets/images/icons/settings.svg'
 import settingsActiveIcon from '@/assets/images/icons/settings-active.svg'
 import toggleIcon from '@/assets/images/icons/toggle.svg'
 import toggleActiveIcon from '@/assets/images/icons/toggle-active.svg'
-import {jwtDecode} from "jwt-decode";
-import {useFetchUsers} from "@/stores/user/getUsers.js";
 
 const currentUser = reactive({
     email: '',
@@ -24,9 +23,10 @@ const currentUser = reactive({
 const token = localStorage.getItem('token')
 const decoded = jwtDecode(token)
 const authUserEmail = decoded.username
+const userStore = useFetchUsers()
 
-useFetchUsers().usersGet()
-const allUsers = computed(() => useFetchUsers().state.users)
+userStore.usersGet()
+const allUsers = computed(() => userStore.state.users)
 const host = import.meta.env.VITE_API_DOMEN
 
 watch(allUsers, (newUsers) => {
@@ -35,7 +35,7 @@ watch(allUsers, (newUsers) => {
             if (user.email === authUserEmail) {
                 currentUser.email = user.email
                 currentUser.givenName = user.givenName
-                currentUser.image = user.image?.contentUrl || []
+                currentUser.image = user.image?.contentUrl || null
             }
         })
     }
@@ -74,9 +74,9 @@ function toggleSidebar() {
         <!-- Sidebar -->
             <!-- Logo -->
             <div class="p-3 align-items-center">
-                    <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">
-                        Kadirov Inc
-                    </span>
+                <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name text-nowrap">
+                    Kadirov Inc
+                </span>
                 <span class="font-open-sans fw-semibold fs-18 text-p-blue ms-2 company-name-short d-none">Inc</span>
             </div>
 
@@ -90,6 +90,14 @@ function toggleSidebar() {
                         class="rounded-circle me-3"
                         :src="host + currentUser.image"
                         alt=""
+                        width="46"
+                        height="46"
+                    >
+                    <img
+                        v-else
+                        class="me-3 avatar"
+                        :src="userActiveIcon"
+                        alt="Standart avatar"
                         width="46"
                         height="46"
                     >
@@ -170,8 +178,10 @@ function toggleSidebar() {
 
 /* Sidebar - start */
 .sidebar {
+    position: sticky;
+    top: 0;
     width: 256px;
-    background: #fff;
+    background: #fff !important;
     min-height: 100svh;
 }
 

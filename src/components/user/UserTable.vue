@@ -1,9 +1,13 @@
 <script setup>
 import {useFetchUsers} from "@/stores/user/getUsers.js";
 import {computed} from "vue";
+import defaultUserAvatar from "@/assets/images/icons/user-active.svg"
+import deleteIcon from "@/assets/images/icons/delete.svg"
 
-useFetchUsers().usersGet()
-const users = computed(() => useFetchUsers().state.users)
+const userStore = useFetchUsers()
+
+userStore.usersGet()
+const users = computed(() => userStore.state.users)
 const host = import.meta.env.VITE_API_DOMEN
 </script>
 
@@ -27,10 +31,18 @@ const host = import.meta.env.VITE_API_DOMEN
             >
                 <td class="ps-3 ps-md-4 py-2 py-sm-3 w-23">
                     <img
-                        v-if="user.image.contentUrl"
+                        v-if="user.image?.contentUrl"
                         class="rounded-circle me-3"
                         :src="host + user.image.contentUrl"
                         alt=""
+                        width="24"
+                        height="24"
+                    >
+                    <img
+                        v-else
+                        class="me-3 avatar"
+                        :src="defaultUserAvatar"
+                        alt="Standart avatar"
                         width="24"
                         height="24"
                     >
@@ -44,8 +56,10 @@ const host = import.meta.env.VITE_API_DOMEN
                         <button type="button" class="img-btn" data-bs-target="#modalChange" data-bs-toggle="modal">
                             <img src="../../assets/images/icons/edit.svg" alt="edit">
                         </button>
-                        <button type="button" class="img-btn" data-bs-target="#modalDelete" data-bs-toggle="modal">
-                            <img src="../../assets/images/icons/delete.svg" alt="delete">
+                        <button type="button"
+                                @click="$emit('delete', user.id)"
+                                class="img-btn">
+                            <img :src="deleteIcon" alt="delete">
                         </button>
                     </div>
                 </td>
