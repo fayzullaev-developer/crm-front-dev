@@ -178,11 +178,9 @@ function toggleSidebar() {
 
 /* Sidebar - start */
 .sidebar {
-    position: sticky;
-    top: 0;
     width: 256px;
     background: #fff !important;
-    min-height: 100svh;
+    height: 100%;
 }
 
 .sidebar.sidebar-collapsed {

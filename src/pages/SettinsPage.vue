@@ -12,7 +12,7 @@ function logOut() {
 </script>
 
 <template>
-    <div class="col-sm-auto">
+    <div class="col-sm-auto sticky-top sidebar-p">
         <Sidebar />
     </div>
 

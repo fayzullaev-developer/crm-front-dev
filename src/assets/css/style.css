@@ -48,6 +48,10 @@ input, select {
 .bg-p-red { background-color: #f7685b; }
 
 .rounded-min { border-radius: 2px; }
+
+.sidebar-p {
+    height: 100svh;
+}
 /* General style - end */
 
 /* Modal - start */

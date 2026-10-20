@@ -4,6 +4,10 @@ import FormButton from "@/components/tags/FormButton.vue";
 import {reactive, ref} from "vue";
 import {useAuthorization} from "@/stores/user/authorization.js";
 import {useRouter} from "vue-router";
+import {useToastStore} from "@/stores/toast/showToast.js";
+import ToastNotification from "@/components/ToastNotification.vue";
+
+const toastStore = useToastStore()
 
 const router = useRouter();
 let isLoading = ref(false);
@@ -17,6 +21,13 @@ function auth() {
     useAuthorization().userAuth(authorization)
         .then(() => {
             router.push("/");
+        })
+        .catch((err) => {
+            const errorMsg = err.response?.data?.message
+            toastStore.showToast("Xato:\n" + errorMsg, 'fail')
+        })
+        .finally(() => {
+            isLoading.value = false
         })
 }
 </script>
@@ -47,6 +58,7 @@ function auth() {
             </form>
         </div>
     </div>
+    <ToastNotification />
 </template>
 
 <style scoped>
