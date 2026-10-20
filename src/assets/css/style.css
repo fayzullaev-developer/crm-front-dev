@@ -49,8 +49,10 @@ input, select {
 
 .rounded-min { border-radius: 2px; }
 
-.sidebar-p {
-    height: 100svh;
+@media (min-width: 576px) {
+    .sidebar-p {
+        height: 100svh;
+    }
 }
 /* General style - end */
 
