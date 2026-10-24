@@ -17,7 +17,6 @@ const route = useRoute()
 const isLoading = ref(false);
 const formSubmitted = ref(false);
 const closeModalBtn = ref(null);
-
 const client = reactive({
     givenName: '',
     email: '',
@@ -71,11 +70,9 @@ function createClient(form) {
             if (closeModalBtn.value) {
                 closeModalBtn.value.click();
             }
-
-            console.log(errorMsg)
         })
         .finally(() => {
-            isLoading.value = false
+            isLoading.value = false;
         })
 }
 
@@ -96,7 +93,9 @@ function create(event) {
             })
             .catch((err) => {
                 const errorMsg = err.response?.data?.detail
-                toastStore.showToast("Rasm yuklanmadi: " + errorMsg, 'fail')
+                toastStore.showToast("Rasm yuklanmadi:\n" + errorMsg, 'fail')
+            })
+            .finally(() => {
                 isLoading.value = false;
             })
     } else {
@@ -123,7 +122,7 @@ function create(event) {
                 </div>
                 <div class="modal-body">
                     <form
-                        @submit.prevent="create"
+                        @submit.prevent="create($event)"
                         :class="{ 'was-validated': formSubmitted }"
                         novalidate
                     >
@@ -181,7 +180,7 @@ function create(event) {
                         </div>
                         <div class="mb-3">
                             <label for="image" class="col-form-label pt-1 font-poppins fw-normal fs-14">
-                                Rasmi
+                                Rasm (ixtiyoriy)
                             </label>
                             <input
                                 @change="selectImage($event)"

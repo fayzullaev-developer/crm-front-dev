@@ -1,4 +1,4 @@
-1. Kompaniya, user'ni yaratish (create) (2 soat)
+1. Kompaniyani yaratish (create) (2 soat)
 2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
 3. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
 4. Izlash parametrlarini (search) sozlash
@@ -13,6 +13,7 @@ Frontend:
 
 -- bajarilganlar --
 
+15. User'ni yaratish (create) (2 soat)
 14. Mobile'da layoutni ko'rib chiqildi (scroll qilinganda sidebar joyida qoldi)
 13. User'ni o'chirish (delete) (2 soat)
 12. Kompaniyani o'chirish (delete) (2 soat)
