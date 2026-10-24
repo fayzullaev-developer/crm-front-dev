@@ -96,6 +96,7 @@ td {
 
 .img {
     object-fit: contain;
+    object-position: center;
 }
 
 .img-btn {

@@ -17,6 +17,7 @@ const route = useRoute()
 const isLoading = ref(false);
 const formSubmitted = ref(false);
 const closeModalBtn = ref(null);
+const file = ref(null);
 const client = reactive({
     givenName: '',
     email: '',
@@ -24,7 +25,6 @@ const client = reactive({
     image: null,
 })
 
-let file = ref();
 function selectImage(event) {
     file.value = event.target.files[0];
 }
@@ -94,8 +94,6 @@ function create(event) {
             .catch((err) => {
                 const errorMsg = err.response?.data?.detail
                 toastStore.showToast("Rasm yuklanmadi:\n" + errorMsg, 'fail')
-            })
-            .finally(() => {
                 isLoading.value = false;
             })
     } else {

@@ -1,8 +1,8 @@
-1. Kompaniyani yaratish (create) (2 soat)
-2. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
-3. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
-4. Izlash parametrlarini (search) sozlash
-5. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
+1. Kompaniya, klient, user'ni o'zgartirish (patch) (2 soat)
+2. So'nggi faollikni '4 daqiqa oldin' ga o'xshash jumlalarga o'tkazish (1 soat)
+3. Izlash parametrlarini (search) sozlash
+4. Tizimga kirganda user'larni ichida o'zini ko'rsatmaslik kerak.
+5. Chiqish tugmasini o'zini ishlatish kerak.
 ...
 10. test page'ni olib tashlash va ortiqcha fayllarni o'chirish
 
@@ -13,6 +13,7 @@ Frontend:
 
 -- bajarilganlar --
 
+16. Kompaniyani yaratish (create) (2 soat)
 15. User'ni yaratish (create) (2 soat)
 14. Mobile'da layoutni ko'rib chiqildi (scroll qilinganda sidebar joyida qoldi)
 13. User'ni o'chirish (delete) (2 soat)

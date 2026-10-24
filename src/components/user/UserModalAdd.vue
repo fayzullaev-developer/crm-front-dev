@@ -1,7 +1,7 @@
 <script setup>
-import {useToastStore} from "@/stores/toast/showToast.js";
 import {reactive, ref} from "vue";
 import FormButton from "@/components/tags/FormButton.vue";
+import {useToastStore} from "@/stores/toast/showToast.js";
 import {useAddFile} from "@/stores/mediaObject/addFile.js";
 import {useCreateUser} from "@/stores/user/createUser.js";
 import {useFetchUsers} from "@/stores/user/getUsers.js";
@@ -14,6 +14,7 @@ const deleteFileStore = useDeleteFile()
 const isLoading = ref(false)
 const formSubmitted = ref(false)
 const closeModalBtn = ref(null)
+const file = ref(null)
 const user = reactive({
     givenName: '',
     email: '',
@@ -21,7 +22,6 @@ const user = reactive({
     image: null,
 })
 
-let file = ref()
 function selectImage(event) {
     file.value = event.target.files[0];
 }
@@ -85,8 +85,6 @@ function create(event) {
             .catch((err) => {
                 const errMsg = err.response?.data?.detail;
                 toastStore.showToast("Rasm yuklanmadi:\n" + errMsg, 'fail')
-            })
-            .finally(() => {
                 isLoading.value = false;
             })
     } else {
@@ -111,11 +109,9 @@ function create(event) {
                     </h1>
                 </div>
                 <div class="modal-body">
-                    <form
-                        @submit.prevent="create($event)"
-                        :class="{ 'was-validated': formSubmitted }"
-                        novalidate
-                    >
+                    <form @submit.prevent="create($event)"
+                          :class="{ 'was-validated': formSubmitted }"
+                          novalidate>
                         <div class="mb-3">
                             <label for="name" class="col-form-label pt-1 font-poppins fw-normal fs-14">
                                 Ism<span class="text-p-blue">*</span>
@@ -127,7 +123,7 @@ function create(event) {
                                    id="name"
                                    placeholder="Name" />
                             <div class="invalid-feedback">
-                                Iltimos, ismingizni kiriting.
+                                Iltimos, ismni kiriting.
                             </div>
                         </div>
                         <div class="mb-3">
@@ -162,12 +158,10 @@ function create(event) {
                             <label for="image" class="col-form-label pt-1 font-poppins fw-normal fs-14">
                                 Rasm (ixtiyoriy)
                             </label>
-                            <input
-                                @change="selectImage($event)"
-                                class="form-control rounded-2 font-poppins fw-normal fs-14"
-                                type="file"
-                                id="image"
-                           />
+                            <input @change="selectImage($event)"
+                                   class="form-control rounded-2 font-poppins fw-normal fs-14"
+                                   type="file"
+                                   id="image" />
                         </div>
                         <div class="d-flex justify-content-center">
                             <FormButton
